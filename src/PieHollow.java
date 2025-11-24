@@ -12,7 +12,7 @@ public class PieHollow {
 
 
     public PieHollow(){
-        canvas=new CanvasWindow("PieHollow", 600, 600);
+        canvas=new CanvasWindow("PieHollow",600, 600);
         //playGame();
     
     }
@@ -28,6 +28,10 @@ public class PieHollow {
     //private void playGame(){
     //    placeElements();
     //}
+
+    private double getCanvasSize(){
+        return CANVAS_HEIGHT;
+    }
 
     // Elements
     private void setBackground(){
