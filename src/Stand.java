@@ -3,9 +3,8 @@ import java.util.List;
 import edu.macalester.graphics.GraphicsObject;
 
 public interface Stand {
-    List getIngredients();
+    void addIngredients(List ingredientsList);
     String getName();
-    void setStandProperties();
-    GraphicsObject getGraphics();
+    GraphicsObject setStandProperties(double size);
     
 }

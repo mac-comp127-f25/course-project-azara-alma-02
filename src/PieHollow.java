@@ -1,7 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 import edu.macalester.graphics.CanvasWindow;
 
 public class PieHollow {
     CanvasWindow canvas; 
+    public static final double CANVAS_HEIGHT = 600;
+    public static final double CANVAS_WIDTH = 600;
+
+    List<String> ingredientsList= new ArrayList();
 
 
     public PieHollow(){
