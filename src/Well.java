@@ -30,9 +30,5 @@ public class Well implements Stand {
         return WellShape;
         
     }
-
-   
-
-   
     
 }
