@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.macalester.graphics.CanvasWindow;
+import edu.macalester.graphics.GraphicsGroup;
 import edu.macalester.graphics.GraphicsObject;
 
 public class PieHollow {
@@ -10,6 +11,8 @@ public class PieHollow {
     public static final double CANVAS_WIDTH = 600;
 
     List<String> ingredientsList= new ArrayList<>();
+
+    public GraphicsGroup standGroup;
 
 
     public PieHollow(){
@@ -22,7 +25,7 @@ public class PieHollow {
         // setBackground();
         makeStands();
         // makeBaker();
-        // makeBakeSale();
+        makeBakeSale();
         // makeKitchen();
     }
 
@@ -44,18 +47,23 @@ public class PieHollow {
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics();
         canvas.add(barn);
+        // standGroup.add(barn);
 
         GraphicsObject filling = new Filling().getGraphics();
         canvas.add(filling);
+        // standGroup.add(filling);
 
         GraphicsObject mill = new Mill().getGraphics();
         canvas.add(mill);
+        // standGroup.add(mill);
 
         GraphicsObject sugarSalt = new Sugar_Salt().getGraphics();
         canvas.add(sugarSalt);
+        // standGroup.add(sugarSalt);
 
         GraphicsObject well = new Well().getGraphics();
         canvas.add(well);
+        // standGroup.add(well);
     }
     private void makeBaker(){
 
@@ -64,6 +72,8 @@ public class PieHollow {
 
     }
     private void makeBakeSale(){
+        GraphicsObject bakeSale = new BakeSale().getGraphics();
+        canvas.add(bakeSale);
 
     }
 
