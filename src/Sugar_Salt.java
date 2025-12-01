@@ -8,10 +8,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
 
 public class Sugar_Salt implements Stand {
+  String name = "Sugar & Salt";
 
   @Override
   public String getName() {
-    String name = "Sugar & Salt";
     return name;
 
   }
