@@ -23,6 +23,13 @@ public class Barn implements Stand {
     return name;
   }
 
+    @Override
+  public void addIngredients(List ingredientsList) {
+    ingredientsList.add("Butter"); // Will need to change the code for this class to allow for the selection of different fillings.
+    ingredientsList.add("Eggs");
+
+  }
+
   @Override
   public GraphicsObject getGraphics(){
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
