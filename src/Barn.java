@@ -11,17 +11,20 @@ import edu.macalester.graphics.Rectangle;
 public class Barn implements Stand {
   String name = "Bailey's Barn"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
 
+  double size = PieHollow.getSize();
+
+  double X = size*0.4; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
+  double Y= size*0.5;
+  double Width = 40; 
+  double Height =10;
+
   @Override
   public String getName() {
     return name;
   }
 
   @Override
-  public GraphicsObject setStandProperties(double size){
-    double X = size*0.4; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
-    double Y= size*0.5;
-    double Width = 40; 
-    double Height =10;
+  public GraphicsObject getGraphics(double size){
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
     return millShape;
   }
@@ -31,6 +34,11 @@ public class Barn implements Stand {
     ingredientsList.add("Butter");
     ingredientsList.add("Eggs");
 
+  }
+
+  @Override
+  public int getX() {
+    return X;
   }
 
 
