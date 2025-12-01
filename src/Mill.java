@@ -10,7 +10,6 @@ import edu.macalester.graphics.Rectangle;
 public class Mill implements Stand{
   String name = "Milson's Mill";
 
-
   @Override
   public String getName() {
     return name;
@@ -18,8 +17,8 @@ public class Mill implements Stand{
 
   @Override
   public GraphicsObject setStandProperties(double size){
-    double X = size*0.1;
-    double Y= size*0.2;
+    double X = size*0.9;
+    double Y= size*0.8;
     double Width = 40; 
     double Height =10;
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
