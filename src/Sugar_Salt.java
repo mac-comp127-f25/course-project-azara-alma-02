@@ -9,6 +9,7 @@ import edu.macalester.graphics.Rectangle;
 
 public class Sugar_Salt implements Stand {
   String name = "Sugar & Salt";
+  double size = PieHollow.getSize();
   double X = size*0.1;
   double Y= size*0.2;
   double Width = 40; 
@@ -17,10 +18,7 @@ public class Sugar_Salt implements Stand {
   @Override
   public String getName() {
     return name;
-
   }
-
-  
 
   
   @Override
@@ -31,35 +29,29 @@ public class Sugar_Salt implements Stand {
   }
 
   @Override
-  public GraphicsObject getGraphics(double size) {
+  public GraphicsObject getGraphics() {
     Rectangle saltSugarShape = new Rectangle(X, Y, Width, Height);
     return saltSugarShape;
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getGraphics'");
   }
 
   @Override
-  public int getX() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getX'");
+  public double getX() {
+    return X;
   }
 
   @Override
-  public int getY() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getY'");
+  public double getY() {
+    return Y;
   }
 
   @Override
-  public int getWidth() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getWidth'");
+  public double getWidth() {
+    return Width;
   }
 
   @Override
-  public int getHeight() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getHeight'");
+  public double getHeight() {
+   return Height;
   }
 
 }

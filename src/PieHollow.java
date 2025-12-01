@@ -42,19 +42,19 @@ public class PieHollow {
     private void setBackground(){
     }
     private void makeStands(){
-        GraphicsObject barn = new Barn().setStandProperties(CANVAS_HEIGHT);
+        GraphicsObject barn = new Barn().getGraphics();
         canvas.add(barn);
 
-        GraphicsObject filling = new Filling().setStandProperties(CANVAS_HEIGHT);
+        GraphicsObject filling = new Filling().getGraphics();
         canvas.add(filling);
 
-        GraphicsObject mill = new Mill().setStandProperties(CANVAS_HEIGHT);
+        GraphicsObject mill = new Mill().getGraphics();
         canvas.add(mill);
 
-        GraphicsObject sugarSalt = new Sugar_Salt().setStandProperties(CANVAS_HEIGHT);
+        GraphicsObject sugarSalt = new Sugar_Salt().getGraphics();
         canvas.add(sugarSalt);
 
-        GraphicsObject well = new Well().setStandProperties(CANVAS_HEIGHT);
+        GraphicsObject well = new Well().getGraphics();
         canvas.add(well);
     }
     private void makeBaker(){
