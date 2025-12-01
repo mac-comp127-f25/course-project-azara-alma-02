@@ -22,8 +22,8 @@ public class Well implements Stand {
 
     @Override
     public GraphicsObject setStandProperties(double size) {
-        double X= size *0.3; 
-        double Y= size *0.7; 
+        double X= size *0.1; 
+        double Y= size *0.8; 
         double Height= 20; 
         double Width =20; 
         Rectangle WellShape = new Rectangle(X, Y, Width, Height);

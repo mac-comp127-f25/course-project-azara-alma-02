@@ -18,7 +18,7 @@ public class Filling implements Stand {
 
   @Override
   public GraphicsObject setStandProperties(double size){
-    double X = size*0.1;
+    double X = size*0.3;
     double Y= size*0.2;
     double Width = 40; 
     double Height =10;
@@ -28,7 +28,7 @@ public class Filling implements Stand {
     
   @Override
   public void addIngredients(List ingredientsList) {
-    ingredientsList.add("Blueberries"); // Willm need to change the code for this class to allow for the selection of different fillings.
+    ingredientsList.add("Blueberries"); // Will need to change the code for this class to allow for the selection of different fillings.
 
   }
 }
