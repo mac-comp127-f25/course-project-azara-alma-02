@@ -11,6 +11,7 @@ public class Barn implements Stand {
   String name = "Bailey's Barn"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
 
 
+
   @Override
   public String getName() {
     return name;
