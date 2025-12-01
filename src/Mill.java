@@ -10,17 +10,20 @@ import edu.macalester.graphics.Rectangle;
 public class Mill implements Stand{
   String name = "Milson's Mill";
 
+  double size = PieHollow.getSize();
+
+  double X = size*0.9;
+  double Y= size*0.8;
+  double Width = 40; 
+  double Height =10;
+
   @Override
   public String getName() {
     return name;
   }
 
   @Override
-  public GraphicsObject setStandProperties(double size){
-    double X = size*0.9;
-    double Y= size*0.8;
-    double Width = 40; 
-    double Height =10;
+  public GraphicsObject getGraphics(){
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
     return millShape;
   }
@@ -29,5 +32,25 @@ public class Mill implements Stand{
   public void addIngredients(List ingredientsList) {
     ingredientsList.add("Flour");
 
+  }
+
+  @Override
+  public double getX() {
+    return X;
+  }
+
+  @Override
+  public double getY() {
+    return Y;
+  }
+
+  @Override
+  public double getWidth() {
+    return Width;
+  }
+
+  @Override
+  public double getHeight() {
+    return Height;
   }
 }

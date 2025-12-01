@@ -13,7 +13,7 @@ public class Barn implements Stand {
 
   double size = PieHollow.getSize();
 
-  double X = size*0.4; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
+  double X = size*0.4; 
   double Y= size*0.5;
   double Width = 40; 
   double Height =10;
@@ -24,22 +24,28 @@ public class Barn implements Stand {
   }
 
   @Override
-  public GraphicsObject getGraphics(double size){
+  public GraphicsObject getGraphics(){
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
     return millShape;
   }
     
   @Override
-  public void addIngredients(List ingredientsList) {
-    ingredientsList.add("Butter");
-    ingredientsList.add("Eggs");
-
-  }
-
-  @Override
-  public int getX() {
+  public double getX() {
     return X;
   }
 
+  @Override
+  public double getY() {
+    return Y;
+  }
 
+  @Override
+  public double getWidth() {
+    return Width;
+  }
+
+  @Override
+  public double getHeight() {
+    return Height;
+  }
 }
