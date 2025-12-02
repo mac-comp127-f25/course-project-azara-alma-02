@@ -8,7 +8,7 @@ public class Kitchen {
     double MapWidth=PieHollow.getWidth();
 
     private double X = MapWidth*0.05; 
-    private double Y= MapHeight*0.7;
+    private double Y= MapHeight*0.67;
     private double Width = 40; 
     private double Height =20;
 

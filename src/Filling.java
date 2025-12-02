@@ -3,6 +3,7 @@
  */
 
 import java.util.List;
+import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
@@ -24,8 +25,9 @@ public class Filling implements Stand {
   }
 
   @Override
-  public GraphicsObject getGraphics(){
+  public GraphicsObject getGraphics(Color color){
     Rectangle millShape = new Rectangle(X, Y, Width, Height);
+    millShape.setFillColor(color);
     return millShape;
   }
     

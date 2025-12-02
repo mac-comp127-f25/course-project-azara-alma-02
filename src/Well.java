@@ -3,6 +3,7 @@ Water
  */
 
 import java.util.List;
+import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
@@ -32,9 +33,10 @@ public class Well implements Stand {
 
 
     @Override
-    public GraphicsObject getGraphics() {
-        Rectangle WellShape = new Rectangle(X, Y, Width, Height);
-        return WellShape;
+    public GraphicsObject getGraphics(Color color) {
+        Rectangle wellShape = new Rectangle(X, Y, Width, Height);
+        wellShape.setFillColor(color);
+        return wellShape;
     }
 
     @Override

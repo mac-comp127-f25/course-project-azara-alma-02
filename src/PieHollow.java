@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class PieHollow {
 
     List<String> ingredientsList= new ArrayList<>();
 
+
     public GraphicsGroup standGroup;
 
 
@@ -28,6 +30,7 @@ public class PieHollow {
     private void placeElements(){
         setBackground();
         makeStands();
+        
         // makeBaker();
         makeBakeSale();
         makeKitchen();
@@ -53,23 +56,23 @@ public class PieHollow {
     }
 
     private void makeStands(){
-        GraphicsObject barn = new Barn().getGraphics();
+        GraphicsObject barn = new Barn().getGraphics(Color.RED);
         canvas.add(barn);
         // standGroup.add(barn);
 
-        GraphicsObject filling = new Filling().getGraphics();
+        GraphicsObject filling = new Filling().getGraphics(Color.BLUE);
         canvas.add(filling);
         // standGroup.add(filling);
 
-        GraphicsObject mill = new Mill().getGraphics();
+        GraphicsObject mill = new Mill().getGraphics(Color.YELLOW);
         canvas.add(mill);
         // standGroup.add(mill);
 
-        GraphicsObject sugarSalt = new Sugar_Salt().getGraphics();
+        GraphicsObject sugarSalt = new Sugar_Salt().getGraphics(Color.WHITE);
         canvas.add(sugarSalt);
         // standGroup.add(sugarSalt);
 
-        GraphicsObject well = new Well().getGraphics();
+        GraphicsObject well = new Well().getGraphics(Color.BLACK);
         canvas.add(well);
         // standGroup.add(well);
     }

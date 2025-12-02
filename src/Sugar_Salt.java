@@ -3,6 +3,7 @@
  */
 
 import java.util.List;
+import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
@@ -31,8 +32,9 @@ public class Sugar_Salt implements Stand {
   }
 
   @Override
-  public GraphicsObject getGraphics() {
+  public GraphicsObject getGraphics(Color color) {
     Rectangle saltSugarShape = new Rectangle(X, Y, Width, Height);
+    saltSugarShape.setFillColor(color);
     return saltSugarShape;
   }
 
