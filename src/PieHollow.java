@@ -4,11 +4,15 @@ import java.util.List;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsGroup;
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.Image;
 
 public class PieHollow {
     CanvasWindow canvas; 
-    public static final double CANVAS_HEIGHT = 600;
-    public static final double CANVAS_WIDTH = 600;
+    
+    public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
+
+    public static final int CANVAS_HEIGHT = PieHollowMapImage.getImageHeight();
+    public static final int CANVAS_WIDTH = PieHollowMapImage.getImageWidth();
 
     List<String> ingredientsList= new ArrayList<>();
 
@@ -16,13 +20,13 @@ public class PieHollow {
 
 
     public PieHollow(){
-        canvas=new CanvasWindow("PieHollow",600, 600);
+        canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
         playGame();
     
     }
 
     private void placeElements(){
-        // setBackground();
+        setBackground();
         makeStands();
         // makeBaker();
         makeBakeSale();
@@ -37,13 +41,16 @@ public class PieHollow {
         return CANVAS_HEIGHT;
     }
 
-    
-
     // Elements
     private void setBackground(){
-
+        PieHollowMapImage.setMaxWidth(CANVAS_WIDTH);
+        PieHollowMapImage.setMaxHeight(CANVAS_HEIGHT);
+        canvas.add(PieHollowMapImage);
     }
+
     
+
+
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics();
         canvas.add(barn);
