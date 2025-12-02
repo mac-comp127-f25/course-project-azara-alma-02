@@ -37,8 +37,12 @@ public class PieHollow {
        placeElements();
     }
 
-    public static double getSize(){
+    public static double getHeight(){
         return CANVAS_HEIGHT;
+    }
+
+    public static double getWidth(){
+        return CANVAS_WIDTH;
     }
 
     // Elements
@@ -47,9 +51,6 @@ public class PieHollow {
         PieHollowMapImage.setMaxHeight(CANVAS_HEIGHT);
         canvas.add(PieHollowMapImage);
     }
-
-    
-
 
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics();
@@ -85,8 +86,6 @@ public class PieHollow {
         canvas.add(bakeSale);
 
     }
-
-
     public static void main(String[] args) {
         new PieHollow();
     }

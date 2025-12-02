@@ -10,10 +10,11 @@ import edu.macalester.graphics.Rectangle;
 public class Well implements Stand {
 
     String name ="Well";
-    double size = PieHollow.getSize();
+    double MapHeight = PieHollow.getHeight();
+    double MapWidth=PieHollow.getWidth();
     
-    double X= size *0.1; 
-    double Y= size *0.8; 
+    double X= MapWidth *0.25; 
+    double Y= MapHeight *0.65; 
     double Height= 20; 
     double Width =20; 
 

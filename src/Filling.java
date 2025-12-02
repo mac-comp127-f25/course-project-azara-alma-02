@@ -10,10 +10,11 @@ import edu.macalester.graphics.Rectangle;
 public class Filling implements Stand {
   String name = "Fabulous Fruits";
 
-  double size = PieHollow.getSize();
+  double MapHeight = PieHollow.getHeight();
+  double MapWidth=PieHollow.getWidth();
 
-  double X = size*0.3;
-  double Y= size*0.2;
+  double X = MapWidth*0.3;
+  double Y= MapHeight*0.2;
   double Width = 40; 
   double Height =10;
 

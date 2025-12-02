@@ -10,10 +10,11 @@ import edu.macalester.graphics.Rectangle;
 public class Mill implements Stand{
   String name = "Milson's Mill";
 
-  double size = PieHollow.getSize();
+  double MapHeight = PieHollow.getHeight();
+  double MapWidth=PieHollow.getWidth();
 
-  double X = size*0.9;
-  double Y= size*0.8;
+  double X = MapWidth*0.9;
+  double Y= MapHeight*0.8;
   double Width = 40; 
   double Height =10;
 

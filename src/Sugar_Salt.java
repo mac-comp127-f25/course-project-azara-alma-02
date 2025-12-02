@@ -9,9 +9,11 @@ import edu.macalester.graphics.Rectangle;
 
 public class Sugar_Salt implements Stand {
   String name = "Sugar & Salt";
-  double size = PieHollow.getSize();
-  double X = size*0.1;
-  double Y= size*0.2;
+  double MapHeight = PieHollow.getHeight();
+  double MapWidth=PieHollow.getWidth();
+
+  double X = MapWidth*0.1;
+  double Y= MapHeight*0.2;
   double Width = 40; 
   double Height =10;
 

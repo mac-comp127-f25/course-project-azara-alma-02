@@ -4,10 +4,11 @@ import edu.macalester.graphics.Rectangle;
 public class Kitchen {
     String name = "Katie's Kitchen"; 
     
-    double size = PieHollow.getSize();
+    double MapHeight = PieHollow.getHeight();
+    double MapWidth=PieHollow.getWidth();
 
-    private double X = size*0.1; 
-    private double Y= size*0.7;
+    private double X = MapWidth*0.05; 
+    private double Y= MapHeight*0.7;
     private double Width = 40; 
     private double Height =20;
 
