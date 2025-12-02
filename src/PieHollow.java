@@ -26,7 +26,7 @@ public class PieHollow {
         makeStands();
         // makeBaker();
         makeBakeSale();
-        // makeKitchen();
+        makeKitchen();
     }
 
     private void playGame(){
@@ -37,13 +37,13 @@ public class PieHollow {
         return CANVAS_HEIGHT;
     }
 
-    private double getCanvasSize(){
-        return CANVAS_HEIGHT;
-    }
+    
 
     // Elements
     private void setBackground(){
+
     }
+    
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics();
         canvas.add(barn);
@@ -69,6 +69,8 @@ public class PieHollow {
 
     }
     private void makeKitchen(){
+        GraphicsObject kitchen=new Kitchen().getGraphics();
+        canvas.add(kitchen);
 
     }
     private void makeBakeSale(){
