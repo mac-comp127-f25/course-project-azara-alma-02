@@ -20,7 +20,6 @@ public class PieHollow {
 
     public GraphicsGroup standGroup;
 
-
     public PieHollow(){
         canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
         this.standGroup=new GraphicsGroup();
@@ -30,15 +29,27 @@ public class PieHollow {
 
     private void placeElements(){
         setBackground();
-        makeStands();
-        
         makeBaker();
         makeBakeSale();
         makeKitchen();
+        makeStands();
     }
+
+    private void KeyMoved(){
+
+        canvas.animate(->
+            {
+
+        });
+
+        
+
+    }
+
 
     private void playGame(){
        placeElements();
+
     }
 
     public static double getHeight(){
@@ -59,23 +70,23 @@ public class PieHollow {
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics(Color.RED);
         canvas.add(barn);
-        // standGroup.add(barn);
+        //standGroup.add(barn);
 
         GraphicsObject filling = new Filling().getGraphics(Color.BLUE);
         canvas.add(filling);
-        // standGroup.add(filling);
+        //standGroup.add(filling);
 
         GraphicsObject mill = new Mill().getGraphics(Color.YELLOW);
         canvas.add(mill);
-        // standGroup.add(mill);
+        //standGroup.add(mill);
 
         GraphicsObject sugarSalt = new Sugar_Salt().getGraphics(Color.WHITE);
         canvas.add(sugarSalt);
-        // standGroup.add(sugarSalt);
+        //standGroup.add(sugarSalt);
 
         GraphicsObject well = new Well().getGraphics(Color.BLACK);
         canvas.add(well);
-        // standGroup.add(well);
+        //standGroup.add(well);
     }
     private void makeBaker(){
         GraphicsObject baker=new Baker(0,0).getGraphics();

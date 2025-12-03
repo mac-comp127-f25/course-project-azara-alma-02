@@ -6,7 +6,6 @@ import java.util.List;
 import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
-import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Rectangle;
 
 public class Barn implements Stand {

@@ -3,10 +3,14 @@ import edu.macalester.graphics.Rectangle;
 
 public class Baker {
     //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.
+    double MapHeight = PieHollow.getHeight();
+    double MapWidth=PieHollow.getWidth();
+    
     private double x;
     private double y;
     private final double SIZE = 20;
     private final double SPEED = 10;
+    
     public Baker(double startX, double startY) { //Start position on canvas determined in constructor, not in getGraphics.
         this.x = startX;
         this.y = startY;
@@ -23,11 +27,45 @@ public class Baker {
     public double getSpeed() {
         return SPEED;
     }
+
     public void updatePosition(double newX, double newY) { // I think in the main gain method we have movements that create nex xs/ys depending on key movements, and each like if statement calla this method to move the baker. Model a bit off of breakout.
         this.x = newX;
         this.y = newY;
         getGraphics();
     }
+
+
+    //Consider Baker size
+
+    public void leftPressed(){
+        if(x>0){
+        this.x-=SPEED;               //Subtracts speed.                               
+        }                            //check if else is needed 
+        updatePosition(x, y);        //Add collison checker 
+    }
+
+    public void rightPressed(){
+        if (x+SIZE<MapWidth){
+            this.x+=SPEED;
+        }
+        updatePosition(x, y); 
+    }
+
+    public void upPressed(){
+        if (y>0){
+            this.y-=SPEED;
+        }
+        updatePosition(x, y);
+    }
+
+    public void downPressed(){
+        if(y+SIZE<MapHeight){
+            this.y+=SPEED;
+        }
+        updatePosition(x, y);
+
+    }
+
     public GraphicsObject getGraphics(){
         Rectangle bakerShape = new Rectangle(x, y, SIZE, SIZE);
         return bakerShape;
