@@ -37,8 +37,8 @@ public class PieHollow {
 
     private void KeyMoved(){
 
-        canvas.animate(->
-            {
+        canvas.animate(()->{
+            canvas.getKeysPressed()
 
         });
 
