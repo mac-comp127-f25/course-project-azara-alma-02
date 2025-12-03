@@ -23,6 +23,7 @@ public class PieHollow {
 
     public PieHollow(){
         canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
+        this.standGroup=new GraphicsGroup();
         playGame();
     
     }
@@ -31,7 +32,7 @@ public class PieHollow {
         setBackground();
         makeStands();
         
-        // makeBaker();
+        makeBaker();
         makeBakeSale();
         makeKitchen();
     }
@@ -77,6 +78,8 @@ public class PieHollow {
         // standGroup.add(well);
     }
     private void makeBaker(){
+        GraphicsObject baker=new Baker(0,0).getGraphics();
+        canvas.add(baker);
 
     }
     private void makeKitchen(){
