@@ -6,6 +6,8 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsGroup;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Image;
+import edu.macalester.graphics.events.Key;
+
 
 public class PieHollow {
     CanvasWindow canvas; 
@@ -36,10 +38,28 @@ public class PieHollow {
     }
 
     private void KeyMoved(){
-
         canvas.animate(()->{
-            canvas.getKeysPressed()
+            
+            for(Key key:canvas.getKeysPressed()){
+            if (key.equals(RIGHT_ARROW)){
+                baker.rightPressed();
 
+            }
+
+            else if(key.equals(LEFT_ARROW)){
+
+            }
+
+            else if (key.equals(UP_ARROW)){
+
+            }
+
+            else if (key.equals(DOWN_ARROW)){
+   
+            }
+
+            }
+            
         });
 
         
@@ -89,7 +109,7 @@ public class PieHollow {
         //standGroup.add(well);
     }
     private void makeBaker(){
-        GraphicsObject baker=new Baker(0,0).getGraphics();
+        GraphicsObject baker = new Baker(0,0).getGraphics();
         canvas.add(baker);
 
     }
