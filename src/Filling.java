@@ -26,9 +26,9 @@ public class Filling implements Stand {
 
   @Override
   public GraphicsObject getGraphics(Color color){
-    Rectangle millShape = new Rectangle(X, Y, Width, Height);
-    millShape.setFillColor(color);
-    return millShape;
+    Rectangle fillShape = new Rectangle(X, Y, Width, Height);
+    fillShape.setFillColor(color);
+    return fillShape;
   }
     
   @Override

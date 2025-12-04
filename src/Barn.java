@@ -6,6 +6,7 @@ import java.util.List;
 import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Barn implements Stand {
@@ -16,8 +17,8 @@ public class Barn implements Stand {
 
   double X = MapWidth*0.4; 
   double Y= MapHeight*0.5;
-  double Width = 40; 
-  double Height =10;
+  double Width = 80; 
+  double Height =80;
 
   @Override
   public String getName() {
@@ -33,9 +34,9 @@ public class Barn implements Stand {
 
   @Override
   public GraphicsObject getGraphics(Color color){
-    Rectangle millShape = new Rectangle(X, Y, Width, Height);
-    millShape.setFillColor(color);
-    return millShape;
+    Rectangle barnShape = new Rectangle(X, Y, Width, Height);
+    barnShape.setFillColor(color);
+    return barnShape;
   }
     
   @Override

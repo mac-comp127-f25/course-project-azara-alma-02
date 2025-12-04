@@ -37,34 +37,31 @@ public class PieHollow {
         makeStands();
     }
 
-    private void KeyMoved(){
-        canvas.animate(()->{
+    // private void KeyMoved(){
+    //    canvas.animate(()->{
             
-            for(Key key:canvas.getKeysPressed()){
-            if (key.equals(RIGHT_ARROW)){
-                baker.rightPressed();
+    //      for(Key key:canvas.getKeysPressed()){
+    //         if (key.equals(RIGHT_ARROW)){
+    //             baker.rightPressed();
 
-            }
+    //         }
 
-            else if(key.equals(LEFT_ARROW)){
+    //         else if(key.equals(LEFT_ARROW)){
 
-            }
+    //         }
 
-            else if (key.equals(UP_ARROW)){
+    //         else if (key.equals(UP_ARROW)){
 
-            }
+    //         }
 
-            else if (key.equals(DOWN_ARROW)){
+    //         else if (key.equals(DOWN_ARROW)){
    
-            }
+    //         }
 
-            }
+    //         }
             
-        });
-
-        
-
-    }
+    //     });
+    //}
 
 
     private void playGame(){
