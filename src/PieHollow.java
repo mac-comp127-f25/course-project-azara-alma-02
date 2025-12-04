@@ -7,7 +7,9 @@ import edu.macalester.graphics.GraphicsGroup;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
+import edu.macalester.graphics.Rectangle;
 import edu.macalester.graphics.events.Key;
+import edu.macalester.graphics.ui.Button;
 
 
 public class PieHollow {
@@ -22,10 +24,12 @@ public class PieHollow {
 
     List<String> ingredientsList= new ArrayList<>();
     public GraphicsGroup standGroup;
+    public GraphicsGroup welcomeScreen; 
 
     public PieHollow(){
         canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
         this.standGroup=new GraphicsGroup();
+        this.welcomeScreen=new GraphicsGroup();
         playGame();
     
     }
@@ -33,11 +37,12 @@ public class PieHollow {
     private void placeElements(){
         setBackground();
         makeLabel();
-        makeBaker();
         makeBakeSale();
         makeKitchen();
         canvas.add(standGroup);
         makeStands();
+        canvas.add(welcomeScreen);
+        makeWelcomeScreen();
     }
 
      private void KeyMoved(){
@@ -58,6 +63,50 @@ public class PieHollow {
             }  
         });
     }
+
+    private void makeWelcomeScreen(){
+        Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.30,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.285,CANVAS_HEIGHT*0.2);
+        backdrop.setFillColor(Color.PINK);
+        welcomeScreen.add(backdrop);
+
+        GraphicsText welcomeMessage= new GraphicsText(" Welcome to Pie Hollow! ", CANVAS_WIDTH*0.37, CANVAS_HEIGHT*0.42);
+        welcomeMessage.setFillColor(Color.BLACK);
+        welcomeScreen.add(welcomeMessage); 
+
+        GraphicsText line1 = new GraphicsText("Collect all of your ingredients to make a pie", CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.45);
+        welcomeScreen.add(line1);
+
+        GraphicsText line2 = new GraphicsText("You will need to visit the well, mill, barn, shops", 
+        CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.47); 
+        welcomeScreen.add(line2);
+
+        GraphicsText line3 = new GraphicsText("Collect your ingredients.", 
+        CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.49); 
+        welcomeScreen.add(line3);
+
+        GraphicsText line4= new GraphicsText("Use the kitchen to make your pie",
+        CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.51);
+        welcomeScreen.add(line4);
+
+        GraphicsText line5 = new GraphicsText("Then, bring your pie to the bakesale!!", 
+        CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.53); 
+        welcomeScreen.add(line5);
+        
+
+        Button playButton= new Button("PLAY!");
+        playButton.setPosition(CANVAS_WIDTH*0.41, CANVAS_HEIGHT*0.55);
+        welcomeScreen.add(playButton);
+        
+
+        playButton.onClick(() -> {             
+        canvas.remove(welcomeScreen);
+        makeBaker();
+        }); 
+
+
+       
+    }
+
 
     private void playGame(){
        placeElements();
