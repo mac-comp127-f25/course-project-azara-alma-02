@@ -13,6 +13,7 @@ public class PieHollow {
     CanvasWindow canvas; 
     
     public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
+    private Baker baker;
 
     public static final int CANVAS_HEIGHT = PieHollowMapImage.getImageHeight();
     public static final int CANVAS_WIDTH = PieHollowMapImage.getImageWidth();
@@ -37,35 +38,39 @@ public class PieHollow {
         makeStands();
     }
 
-    // private void KeyMoved(){
-    //    canvas.animate(()->{
+     private void KeyMoved(){
+       canvas.animate(()->{
             
-    //      for(Key key:canvas.getKeysPressed()){
-    //         if (key.equals(RIGHT_ARROW)){
-    //             baker.rightPressed();
+         for(Key key:canvas.getKeysPressed()){
+            if (key.equals(Key.RIGHT_ARROW)){
+                baker.rightPressed();
 
-    //         }
+            }
 
-    //         else if(key.equals(LEFT_ARROW)){
+            else if(key.equals(Key.LEFT_ARROW)){
+                baker.leftPressed();
 
-    //         }
+            }
 
-    //         else if (key.equals(UP_ARROW)){
+            else if (key.equals(Key.UP_ARROW)){
+                baker.upPressed();
 
-    //         }
+            }
 
-    //         else if (key.equals(DOWN_ARROW)){
+            else if (key.equals(Key.DOWN_ARROW)){
+                baker.downPressed();
    
-    //         }
+            }
 
-    //         }
+            }
             
-    //     });
-    //}
+        });
+    }
 
 
     private void playGame(){
        placeElements();
+       KeyMoved();
 
     }
 
@@ -106,8 +111,8 @@ public class PieHollow {
         //standGroup.add(well);
     }
     private void makeBaker(){
-        GraphicsObject baker = new Baker(0,0).getGraphics();
-        canvas.add(baker);
+        baker = new Baker(0,0);
+        canvas.add(baker.getGraphics());
 
     }
     private void makeKitchen(){

@@ -8,6 +8,7 @@ public class Baker {
     
     private double x;
     private double y;
+    private Rectangle bakerShape;
     private final double SIZE = 20;
     private final double SPEED = 10;
     
@@ -29,9 +30,7 @@ public class Baker {
     }
 
     public void updatePosition(double newX, double newY) { // I think in the main gain method we have movements that create nex xs/ys depending on key movements, and each like if statement calla this method to move the baker. Model a bit off of breakout.
-        this.x = newX;
-        this.y = newY;
-        getGraphics();
+       bakerShape.setPosition(newX, newY);   
     }
 
 
@@ -67,7 +66,7 @@ public class Baker {
     }
 
     public GraphicsObject getGraphics(){
-        Rectangle bakerShape = new Rectangle(x, y, SIZE, SIZE);
+        bakerShape = new Rectangle(x, y, SIZE, SIZE);
         return bakerShape;
   }
 }
