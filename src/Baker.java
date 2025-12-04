@@ -38,13 +38,13 @@ public class Baker {
 
     public void leftPressed(){
         if(x>0){
-        this.x-=SPEED;               //Subtracts speed.                               
-        }                            //check if else is needed 
+        this.x-=SPEED;                                              
+        }                            
         updatePosition(x, y);        //Add collison checker 
     }
 
     public void rightPressed(){
-        if (x+SIZE<MapWidth){
+        if (x+SIZE<MapWidth-2){
             this.x+=SPEED;
         }
         updatePosition(x, y); 
@@ -58,8 +58,10 @@ public class Baker {
     }
 
     public void downPressed(){
-        if(y+SIZE<MapHeight){
+        if(y+SIZE<MapHeight-30){
             this.y+=SPEED;
+            System.out.println(y+SIZE);
+            System.out.println("Map"+MapHeight);
         }
         updatePosition(x, y);
 

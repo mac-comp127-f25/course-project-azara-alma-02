@@ -41,7 +41,6 @@ public class PieHollow {
 
      private void KeyMoved(){
        canvas.animate(()->{
-            
          for(Key key:canvas.getKeysPressed()){
             if (key.equals(Key.RIGHT_ARROW)){
                 baker.rightPressed();
@@ -58,7 +57,6 @@ public class PieHollow {
             }  
         });
     }
-
 
     private void playGame(){
        placeElements();
