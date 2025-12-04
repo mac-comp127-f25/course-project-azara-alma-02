@@ -6,6 +6,7 @@ import java.util.List;
 import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Rectangle;
 
 public class Filling implements Stand {
@@ -32,8 +33,11 @@ public class Filling implements Stand {
   }
     
   @Override
-  public void addIngredients(List ingredientsList) {
+  public void addIngredients(List ingredientsList,GraphicsText inventory) {
     ingredientsList.add("Blueberries"); // Will need to change the code for this class to allow for the selection of different fillings.
+    String text=inventory.getText();
+    inventory.setText(text+ " " + "Blueberries");
+
 
   }
 

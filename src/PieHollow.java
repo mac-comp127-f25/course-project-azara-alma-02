@@ -5,6 +5,7 @@ import java.util.List;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsGroup;
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.events.Key;
 
@@ -14,13 +15,12 @@ public class PieHollow {
     
     public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
     private Baker baker;
+    public GraphicsText inventory; 
 
     public static final int CANVAS_HEIGHT = PieHollowMapImage.getImageHeight();
     public static final int CANVAS_WIDTH = PieHollowMapImage.getImageWidth();
 
     List<String> ingredientsList= new ArrayList<>();
-
-
     public GraphicsGroup standGroup;
 
     public PieHollow(){
@@ -32,6 +32,7 @@ public class PieHollow {
 
     private void placeElements(){
         setBackground();
+        makeLabel();
         makeBaker();
         makeBakeSale();
         makeKitchen();
@@ -108,7 +109,11 @@ public class PieHollow {
     private void makeBakeSale(){
         GraphicsObject bakeSale = new BakeSale().getGraphics();
         canvas.add(bakeSale);
+    }
 
+    private void makeLabel(){
+        inventory=new GraphicsText("I live", CANVAS_WIDTH*0.7, CANVAS_HEIGHT*0.8);
+        canvas.add(inventory);
     }
     public static void main(String[] args) {
         new PieHollow();

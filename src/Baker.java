@@ -60,8 +60,6 @@ public class Baker {
     public void downPressed(){
         if(y+SIZE<MapHeight-30){
             this.y+=SPEED;
-            System.out.println(y+SIZE);
-            System.out.println("Map"+MapHeight);
         }
         updatePosition(x, y);
 
