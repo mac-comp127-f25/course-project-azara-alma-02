@@ -35,6 +35,7 @@ public class PieHollow {
         makeBaker();
         makeBakeSale();
         makeKitchen();
+        canvas.add(standGroup);
         makeStands();
     }
 
@@ -44,26 +45,17 @@ public class PieHollow {
          for(Key key:canvas.getKeysPressed()){
             if (key.equals(Key.RIGHT_ARROW)){
                 baker.rightPressed();
-
             }
-
             else if(key.equals(Key.LEFT_ARROW)){
                 baker.leftPressed();
-
             }
-
             else if (key.equals(Key.UP_ARROW)){
                 baker.upPressed();
-
             }
-
             else if (key.equals(Key.DOWN_ARROW)){
                 baker.downPressed();
-   
             }
-
-            }
-            
+            }  
         });
     }
 
@@ -91,24 +83,19 @@ public class PieHollow {
 
     private void makeStands(){
         GraphicsObject barn = new Barn().getGraphics(Color.RED);
-        canvas.add(barn);
-        //standGroup.add(barn);
+        standGroup.add(barn);
 
         GraphicsObject filling = new Filling().getGraphics(Color.BLUE);
-        canvas.add(filling);
-        //standGroup.add(filling);
+        standGroup.add(filling);
 
         GraphicsObject mill = new Mill().getGraphics(Color.YELLOW);
-        canvas.add(mill);
-        //standGroup.add(mill);
+        standGroup.add(mill);
 
         GraphicsObject sugarSalt = new Sugar_Salt().getGraphics(Color.WHITE);
-        canvas.add(sugarSalt);
-        //standGroup.add(sugarSalt);
+        standGroup.add(sugarSalt);
 
         GraphicsObject well = new Well().getGraphics(Color.BLACK);
-        canvas.add(well);
-        //standGroup.add(well);
+        standGroup.add(well);
     }
     private void makeBaker(){
         baker = new Baker(0,0);

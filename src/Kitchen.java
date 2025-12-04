@@ -1,8 +1,8 @@
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
 
-public class Kitchen {
-    String name = "Katie's Kitchen"; 
+public class Kitchen { 
+    String name = "Katie's Kitchen";                   //Make a Pie Image-add pie to ingredients list --have graphics text changed to be a pie
     
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
