@@ -19,6 +19,8 @@ public class Sugar_Salt implements Stand {
   double Width = 40; 
   double Height =10;
 
+  private Rectangle sugarSaltShape;
+
   @Override
   public String getName() {
     return name;
@@ -36,9 +38,11 @@ public class Sugar_Salt implements Stand {
 
   @Override
   public GraphicsObject getGraphics(Color color) {
-    Rectangle saltSugarShape = new Rectangle(X, Y, Width, Height);
-    saltSugarShape.setFillColor(color);
-    return saltSugarShape;
+    if (sugarSaltShape == null) {
+            sugarSaltShape = new Rectangle(X, Y, Width, Height);
+            sugarSaltShape.setFillColor(color);
+        }
+        return sugarSaltShape;
   }
 
   @Override

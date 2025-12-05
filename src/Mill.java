@@ -20,6 +20,8 @@ public class Mill implements Stand{
   double Width = 40; 
   double Height =10;
 
+  private Rectangle millShape;
+
   @Override
   public String getName() {
     return name;
@@ -27,9 +29,11 @@ public class Mill implements Stand{
 
   @Override
   public GraphicsObject getGraphics(Color color){
-    Rectangle millShape = new Rectangle(X, Y, Width, Height);
-    millShape.setFillColor(color);
-    return millShape;
+    if (millShape == null) {
+            millShape = new Rectangle(X, Y, Width, Height);
+            millShape.setFillColor(color);
+        }
+        return millShape;
   }
     
   @Override

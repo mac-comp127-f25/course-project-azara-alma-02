@@ -24,7 +24,8 @@ public class PieHollow {
 
     List<String> ingredientsList= new ArrayList<>();
     public GraphicsGroup standGroup;
-    public GraphicsGroup welcomeScreen; 
+    public GraphicsGroup welcomeScreen;
+    private List<Stand> standList = new ArrayList<>(); 
 
     public PieHollow(){
         canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
@@ -60,7 +61,8 @@ public class PieHollow {
             else if (key.equals(Key.DOWN_ARROW)){
                 baker.downPressed();
             }
-            }  
+            }
+            checkInteractions();  
         });
     }
 
@@ -101,16 +103,14 @@ public class PieHollow {
         playButton.onClick(() -> {             
         canvas.remove(welcomeScreen);
         makeBaker();
-        }); 
-
-
-       
+        KeyMoved(); //Moved this here because the image was crashing as soon as it opened
+        });   
     }
 
 
     private void playGame(){
        placeElements();
-       KeyMoved();
+    //    KeyMoved();
 
     }
 
@@ -130,21 +130,25 @@ public class PieHollow {
     }
 
     private void makeStands(){
-        GraphicsObject barn = new Barn().getGraphics(Color.RED);
-        standGroup.add(barn);
+        Stand barn = new Barn();
+        Stand filling = new Filling();
+        Stand mill = new Mill();
+        Stand sugarSalt = new Sugar_Salt();
+        Stand well = new Well();
 
-        GraphicsObject filling = new Filling().getGraphics(Color.BLUE);
-        standGroup.add(filling);
+        standList.add(barn); //I added this so we can iterate over the stands, so now they exist seperately to their graphics objects
+        standList.add(filling);
+        standList.add(mill);
+        standList.add(sugarSalt);
+        standList.add(well);
 
-        GraphicsObject mill = new Mill().getGraphics(Color.YELLOW);
-        standGroup.add(mill);
-
-        GraphicsObject sugarSalt = new Sugar_Salt().getGraphics(Color.WHITE);
-        standGroup.add(sugarSalt);
-
-        GraphicsObject well = new Well().getGraphics(Color.BLACK);
-        standGroup.add(well);
+        standGroup.add(barn.getGraphics(Color.RED));
+        standGroup.add(filling.getGraphics(Color.BLUE));
+        standGroup.add(mill.getGraphics(Color.BLUE));
+        standGroup.add(sugarSalt.getGraphics(Color.WHITE));
+        standGroup.add(well.getGraphics(Color.BLACK));
     }
+
     private void makeBaker(){
         baker = new Baker(0,0);
         canvas.add(baker.getGraphics());
@@ -164,6 +168,21 @@ public class PieHollow {
         inventory=new GraphicsText("I live", CANVAS_WIDTH*0.7, CANVAS_HEIGHT*0.8);
         canvas.add(inventory);
     }
+
+    private void checkInteractions() {
+        for(int i = standList.size() - 1; i >= 0; i--) { //Did this backward so elements can be removed safely.
+            Stand stand = standList.get(i);
+
+            if(baker.reachesStand(stand)) {
+                standGroup.remove(stand.getGraphics(Color.RED));
+                stand.addIngredients(ingredientsList, inventory); //Can create another method in each stand class that creates the pop-ups we talked about! Also, our ingredients list is showing up horizontally on the canvas, might want to change that too
+                standList.remove(i); //Add here the shapes back on to the canvas after removal!
+
+                return;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         new PieHollow();
     }

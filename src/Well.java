@@ -20,7 +20,7 @@ public class Well implements Stand {
     double Height= 20; 
     double Width =20; 
 
-    
+    private Rectangle wellShape; 
 
     @Override
     public void addIngredients(List ingredientsList,GraphicsText inventory) {
@@ -37,8 +37,10 @@ public class Well implements Stand {
 
     @Override
     public GraphicsObject getGraphics(Color color) {
-        Rectangle wellShape = new Rectangle(X, Y, Width, Height);
-        wellShape.setFillColor(color);
+        if (wellShape == null) {
+            wellShape = new Rectangle(X, Y, Width, Height);
+            wellShape.setFillColor(color);
+        }
         return wellShape;
     }
 

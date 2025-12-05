@@ -19,6 +19,8 @@ public class Filling implements Stand {
   double Y= MapHeight*0.2;
   double Width = 40; 
   double Height =10;
+  
+  private Rectangle fillingShape;
 
   @Override
   public String getName() {
@@ -27,9 +29,11 @@ public class Filling implements Stand {
 
   @Override
   public GraphicsObject getGraphics(Color color){
-    Rectangle fillShape = new Rectangle(X, Y, Width, Height);
-    fillShape.setFillColor(color);
-    return fillShape;
+    if (fillingShape == null) {
+            fillingShape = new Rectangle(X, Y, Width, Height);
+            fillingShape.setFillColor(color);
+        }
+        return fillingShape;
   }
     
   @Override

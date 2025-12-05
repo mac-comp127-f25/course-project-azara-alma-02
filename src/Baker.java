@@ -11,6 +11,7 @@ public class Baker {
     private Rectangle bakerShape;
     private final double SIZE = 20;
     private final double SPEED = 10;
+    private static final double INTERACTION_WIDTH = 10;
     
     public Baker(double startX, double startY) { //Start position on canvas determined in constructor, not in getGraphics.
         this.x = startX;
@@ -62,7 +63,23 @@ public class Baker {
             this.y+=SPEED;
         }
         updatePosition(x, y);
+    }
 
+    public boolean reachesStand(Stand stand) {
+        double leftBakerBound = this.x;
+        double rightBakerBound = this.x + SIZE;
+        double topBakerBound = this.y;
+        double bottomBakerBound = this.y + SIZE;
+
+        double leftStandBound = stand.getX() - INTERACTION_WIDTH; //- so it can extend out to the left, same for reaching up with topStandBound.
+        double rightStandBound = stand.getX() + stand.getWidth() + INTERACTION_WIDTH;
+        double topStandBound = stand.getY() - INTERACTION_WIDTH;
+        double bottomStandBound = stand.getY() + stand.getHeight() + INTERACTION_WIDTH;
+        
+        boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound;
+        boolean yCollision = topBakerBound < bottomStandBound && bottomBakerBound > topStandBound;
+
+        return xCollision && yCollision;
     }
 
     public GraphicsObject getGraphics(){

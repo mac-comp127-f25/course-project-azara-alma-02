@@ -20,6 +20,8 @@ public class Barn implements Stand {
   double Width = 80; 
   double Height =80;
 
+  private Rectangle barnShape;
+
   @Override
   public String getName() {
     return name;
@@ -35,10 +37,12 @@ public class Barn implements Stand {
   }
 
   @Override
-  public GraphicsObject getGraphics(Color color){
-    Rectangle barnShape = new Rectangle(X, Y, Width, Height);
-    barnShape.setFillColor(color);
-    return barnShape;
+  public GraphicsObject getGraphics(Color color){ //Changed this so that a new rectangle is not made every time getGraphics is called, so that interactions can work properly. 
+    if (barnShape == null) {
+            barnShape = new Rectangle(X, Y, Width, Height);
+            barnShape.setFillColor(color);
+        }
+        return barnShape;
   }
     
   @Override
