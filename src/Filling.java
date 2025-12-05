@@ -7,6 +7,7 @@ import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Filling implements Stand {
@@ -17,10 +18,10 @@ public class Filling implements Stand {
 
   double X = MapWidth*0.3;
   double Y= MapHeight*0.2;
-  double Width = 40; 
-  double Height =10;
+  double Width = 80; 
+  double Height = 80;
   
-  private Rectangle fillingShape;
+  private Image fillingShape;
 
   @Override
   public String getName() {
@@ -30,8 +31,9 @@ public class Filling implements Stand {
   @Override
   public GraphicsObject getGraphics(Color color){
     if (fillingShape == null) {
-            fillingShape = new Rectangle(X, Y, Width, Height);
-            fillingShape.setFillColor(color);
+            fillingShape = new Image(X, Y, "FillingImage.png");
+            fillingShape.setMaxWidth(Width);
+            fillingShape.setMaxHeight(Height);
         }
         return fillingShape;
   }

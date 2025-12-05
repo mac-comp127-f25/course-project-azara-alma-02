@@ -7,6 +7,7 @@ import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Sugar_Salt implements Stand {
@@ -16,10 +17,10 @@ public class Sugar_Salt implements Stand {
 
   double X = MapWidth*0.1;
   double Y= MapHeight*0.2;
-  double Width = 40; 
-  double Height =10;
+  double Width = 80; 
+  double Height = 80;
 
-  private Rectangle sugarSaltShape;
+  private Image sugarSaltShape;
 
   @Override
   public String getName() {
@@ -39,8 +40,9 @@ public class Sugar_Salt implements Stand {
   @Override
   public GraphicsObject getGraphics(Color color) {
     if (sugarSaltShape == null) {
-            sugarSaltShape = new Rectangle(X, Y, Width, Height);
-            sugarSaltShape.setFillColor(color);
+            sugarSaltShape = new Image(X, Y, "SugarSaltImage.png"); //Consider changing this image, does not really match others.
+            sugarSaltShape.setMaxWidth(Width);
+            sugarSaltShape.setMaxHeight(Height);
         }
         return sugarSaltShape;
   }

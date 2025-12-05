@@ -7,6 +7,7 @@ import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Well implements Stand {
@@ -17,10 +18,10 @@ public class Well implements Stand {
     
     double X= MapWidth *0.25; 
     double Y= MapHeight *0.65; 
-    double Height= 20; 
-    double Width =20; 
+    double Height= 80; 
+    double Width = 80; 
 
-    private Rectangle wellShape; 
+    private Image wellShape; 
 
     @Override
     public void addIngredients(List ingredientsList,GraphicsText inventory) {
@@ -37,9 +38,10 @@ public class Well implements Stand {
 
     @Override
     public GraphicsObject getGraphics(Color color) {
-        if (wellShape == null) {
-            wellShape = new Rectangle(X, Y, Width, Height);
-            wellShape.setFillColor(color);
+    if (wellShape == null) {
+            wellShape = new Image(X, Y, "WellImage.png");
+            wellShape.setMaxWidth(Width);
+            wellShape.setMaxHeight(Height);
         }
         return wellShape;
     }

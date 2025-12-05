@@ -7,6 +7,7 @@ import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Mill implements Stand{
@@ -17,10 +18,10 @@ public class Mill implements Stand{
 
   double X = MapWidth*0.9;
   double Y= MapHeight*0.8;
-  double Width = 40; 
-  double Height =10;
+  double Width = 80; 
+  double Height =80;
 
-  private Rectangle millShape;
+  private Image millShape;
 
   @Override
   public String getName() {
@@ -30,8 +31,9 @@ public class Mill implements Stand{
   @Override
   public GraphicsObject getGraphics(Color color){
     if (millShape == null) {
-            millShape = new Rectangle(X, Y, Width, Height);
-            millShape.setFillColor(color);
+            millShape = new Image(X, Y, "MillImage.png"); //Maybe move on canvas a bit
+            millShape.setMaxWidth(Width);
+            millShape.setMaxHeight(Height);
         }
         return millShape;
   }

@@ -7,6 +7,7 @@ import java.awt.Color;
 
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Barn implements Stand {
@@ -20,7 +21,9 @@ public class Barn implements Stand {
   double Width = 80; 
   double Height =80;
 
-  private Rectangle barnShape;
+  // private Rectangle barnShape;
+
+  private Image barnShape;
 
   @Override
   public String getName() {
@@ -39,8 +42,9 @@ public class Barn implements Stand {
   @Override
   public GraphicsObject getGraphics(Color color){ //Changed this so that a new rectangle is not made every time getGraphics is called, so that interactions can work properly. 
     if (barnShape == null) {
-            barnShape = new Rectangle(X, Y, Width, Height);
-            barnShape.setFillColor(color);
+            barnShape = new Image(X, Y, "BarnImage.png");
+            barnShape.setMaxWidth(Width);
+            barnShape.setMaxHeight(Height);
         }
         return barnShape;
   }

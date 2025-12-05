@@ -1,4 +1,5 @@
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class Baker {
@@ -8,14 +9,15 @@ public class Baker {
     
     private double x;
     private double y;
-    private Rectangle bakerShape;
-    private final double SIZE = 20;
+    private final double SIZE = 40;
     private final double SPEED = 10;
     private static final double INTERACTION_WIDTH = 10;
+
+    private Image bakerShape;
     
     public Baker(double startX, double startY) { //Start position on canvas determined in constructor, not in getGraphics.
         this.x = startX;
-        this.y = startY;
+        this.y = startY; //Have her genrate at the kitchen!!
     }
     public double getX() {
         return x;
@@ -76,14 +78,17 @@ public class Baker {
         double topStandBound = stand.getY() - INTERACTION_WIDTH;
         double bottomStandBound = stand.getY() + stand.getHeight() + INTERACTION_WIDTH;
         
-        boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound;
+        boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound; //Lol thanks conceptual mastery puzzles.
         boolean yCollision = topBakerBound < bottomStandBound && bottomBakerBound > topStandBound;
 
         return xCollision && yCollision;
     }
 
     public GraphicsObject getGraphics(){
-        bakerShape = new Rectangle(x, y, SIZE, SIZE);
+        bakerShape = new Image(x, y, "BakerImage.png");
+        bakerShape.setMaxWidth(SIZE);
+        bakerShape.setMaxHeight(SIZE);
+
         return bakerShape;
   }
 }
