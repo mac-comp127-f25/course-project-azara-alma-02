@@ -148,7 +148,6 @@ public class PieHollow {
         });
 
         playAgainButton.onClick(()->{
-
             //Clears x's 
             inventory.getEggsButterBoxText().setText(null);
             inventory.getBlueberriesBoxText().setText(null);
@@ -160,10 +159,8 @@ public class PieHollow {
             for (int i=6; i<ingredientsList.size();i--){
                 ingredientsList.remove(i);
             }
-
             canvas.remove(winScreen);
             
-
         });
     }
 
