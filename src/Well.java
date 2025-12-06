@@ -8,7 +8,7 @@ import java.awt.Color;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
+
 
 public class Well implements Stand {
 
@@ -16,18 +16,17 @@ public class Well implements Stand {
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
     
-    double X= MapWidth *0.25; 
-    double Y= MapHeight *0.65; 
+    double X= MapWidth *0.15; 
+    double Y= MapHeight *0.55; 
     double Height= 80; 
     double Width = 80; 
 
     private Image wellShape; 
 
     @Override
-    public void addIngredients(List ingredientsList,GraphicsText inventory) {
+    public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
         ingredientsList.add("Water");
-        String text=inventory.getText();
-        inventory.setText(text+ " " + "Water");
+        inventory.getWaterBoxText().setText("X");
     }
 
     @Override

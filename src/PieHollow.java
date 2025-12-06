@@ -17,7 +17,7 @@ public class PieHollow {
     
     public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
     private Baker baker;
-    public GraphicsText inventory; 
+    public IngredientDisplay inventory; 
 
     public static final int CANVAS_HEIGHT = PieHollowMapImage.getImageHeight();
     public static final int CANVAS_WIDTH = PieHollowMapImage.getImageWidth();
@@ -37,7 +37,6 @@ public class PieHollow {
 
     private void placeElements(){
         setBackground();
-        makeLabel();
         makeBakeSale();
         makeKitchen();
         canvas.add(standGroup);
@@ -102,6 +101,7 @@ public class PieHollow {
 
         playButton.onClick(() -> {             
         canvas.remove(welcomeScreen);
+        inventory = new IngredientDisplay(canvas, Color.PINK);
         makeBaker();
         KeyMoved(); //Moved this here because the image was crashing as soon as it opened
         });   
@@ -150,7 +150,7 @@ public class PieHollow {
     }
 
     private void makeBaker(){
-        baker = new Baker(0,0);
+        baker = new Baker(CANVAS_WIDTH*0.1,CANVAS_HEIGHT*0.6);
         canvas.add(baker.getGraphics());
 
     }
@@ -164,11 +164,7 @@ public class PieHollow {
         canvas.add(bakeSale);
     }
 
-    private void makeLabel(){
-        inventory=new GraphicsText("I live", CANVAS_WIDTH*0.7, CANVAS_HEIGHT*0.8);
-        canvas.add(inventory);
-    }
-
+   
     private void checkInteractions() {
         for(int i = standList.size() - 1; i >= 0; i--) { //Did this backward so elements can be removed safely.
             Stand stand = standList.get(i);

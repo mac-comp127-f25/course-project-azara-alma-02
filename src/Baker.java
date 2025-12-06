@@ -1,6 +1,6 @@
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
+
 
 public class Baker {
     //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.

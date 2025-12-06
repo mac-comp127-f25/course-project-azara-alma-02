@@ -8,7 +8,7 @@ import java.awt.Color;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
+
 
 public class Barn implements Stand {
   String name = "Bailey's Barn"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
@@ -17,7 +17,7 @@ public class Barn implements Stand {
   double MapWidth=PieHollow.getWidth();
 
   double X = MapWidth*0.4; 
-  double Y= MapHeight*0.5;
+  double Y= MapHeight*0.6;
   double Width = 80; 
   double Height =80;
 
@@ -31,11 +31,10 @@ public class Barn implements Stand {
   }
 
     @Override
-  public void addIngredients(List ingredientsList,GraphicsText inventory) {
+  public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
     ingredientsList.add("Butter"); // Will need to change the code for this class to allow for the selection of different fillings.
     ingredientsList.add("Eggs");
-    String text=inventory.getText();
-    inventory.setText(text+ " " + "Butter" + " " +"Eggs");
+    inventory.getEggsButterBoxText().setText("X");
 
   }
 

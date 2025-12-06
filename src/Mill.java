@@ -8,7 +8,7 @@ import java.awt.Color;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
+
 
 public class Mill implements Stand{
   String name = "Milson's Mill";
@@ -16,8 +16,8 @@ public class Mill implements Stand{
   double MapHeight = PieHollow.getHeight();
   double MapWidth=PieHollow.getWidth();
 
-  double X = MapWidth*0.9;
-  double Y= MapHeight*0.8;
+  double X = MapWidth*0.7;
+  double Y= MapHeight*0.75;
   double Width = 80; 
   double Height =80;
 
@@ -39,10 +39,9 @@ public class Mill implements Stand{
   }
     
   @Override
-  public void addIngredients(List ingredientsList,GraphicsText inventory) {
+  public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
     ingredientsList.add("Flour");
-    String text=inventory.getText();
-    inventory.setText(text+ " " + "Flour");
+    inventory.getFlourBoxText().setText("X");
 
 
   }
