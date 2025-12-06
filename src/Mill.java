@@ -16,10 +16,10 @@ public class Mill implements Stand{
   double MapHeight = PieHollow.getHeight();
   double MapWidth=PieHollow.getWidth();
 
-  double X = MapWidth*0.7;
-  double Y= MapHeight*0.75;
-  double Width = 80; 
-  double Height =80;
+  double X = MapWidth*0.85;
+  double Y= MapHeight*0.40;
+  double Width = 200; 
+  double Height =250;
 
   private Image millShape;
 

@@ -17,9 +17,9 @@ public class Barn implements Stand {
   double MapWidth=PieHollow.getWidth();
 
   double X = MapWidth*0.4; 
-  double Y= MapHeight*0.6;
-  double Width = 80; 
-  double Height =80;
+  double Y= MapHeight*0.65;
+  double Width = 200; 
+  double Height =200;
 
   // private Rectangle barnShape;
 

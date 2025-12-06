@@ -5,11 +5,11 @@ import edu.macalester.graphics.Image;
 public class Baker {
     //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.
     double MapHeight = PieHollow.getHeight();
-    double MapWidth=PieHollow.getWidth();
+    double MapWidth= PieHollow.getWidth();
     
     private double x;
     private double y;
-    private final double SIZE = 40;
+    private final double SIZE = 60;
     private final double SPEED = 10;
     private static final double INTERACTION_WIDTH = 10;
 
