@@ -163,7 +163,15 @@ public class PieHollow {
             for (int i=6; i<ingredientsList.size();i--){
                 ingredientsList.remove(i);
             }
+            
+            pieMade=false;
+
+            makeStands();
+            makeBakeSale();
+            makeKitchen();
+
             canvas.remove(winScreen);
+            System.out.println("Removed");
             
         });
     }
