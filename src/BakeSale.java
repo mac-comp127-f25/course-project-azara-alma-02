@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.util.List;
 
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class BakeSale implements Stand {
@@ -13,10 +14,10 @@ public class BakeSale implements Stand {
 
     private double X = MapWidth*0.9; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
     private double Y= MapHeight*0.05;
-    private double Width = 40; 
-    private double Height =20;
+    private double Width = 80; 
+    private double Height =80;
 
-    private Rectangle bakeSaleShape;
+    private Image bakeSaleShape;
 
     public BakeSale(){
     }
@@ -27,7 +28,9 @@ public class BakeSale implements Stand {
 
     public GraphicsObject getGraphics(Color color){
         if (bakeSaleShape == null) {
-            bakeSaleShape = new Rectangle(X, Y, Width, Height);
+            bakeSaleShape = new Image(X, Y, "BakeSaleImage.png");
+            bakeSaleShape.setMaxWidth(Width);
+            bakeSaleShape.setMaxHeight(Height);
         }
         return bakeSaleShape;
     }

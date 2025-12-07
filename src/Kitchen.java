@@ -13,10 +13,10 @@ public class Kitchen implements Stand{
 
     private double X = MapWidth*0.05; 
     private double Y= MapHeight*0.67;
-    private double Width = 40; 
-    private double Height =20;
+    private double Width = 80; 
+    private double Height = 80;
     
-    private Rectangle kitchenShape;
+    private Image kitchenShape;
 
     public Kitchen(){
     }
@@ -27,7 +27,9 @@ public class Kitchen implements Stand{
 
     public GraphicsObject getGraphics(Color color){
         if (kitchenShape == null) {
-            kitchenShape = new Rectangle(X, Y, Width, Height);
+            kitchenShape = new Image(X, Y, "KitchenImage.png");
+            kitchenShape.setMaxWidth(Width);
+            kitchenShape.setMaxHeight(Height);
         }
         return kitchenShape;
     }
