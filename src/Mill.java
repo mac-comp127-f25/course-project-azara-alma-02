@@ -65,4 +65,9 @@ public class Mill implements Stand{
   public double getHeight() {
     return Height;
   }
+  @Override
+  public void changeKitchenText(IngredientDisplay inventory) {
+    inventory.getKitchenText1().setText("You picked up flour!");
+    inventory.getKitchenText2().setText("");
+  }
 }

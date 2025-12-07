@@ -66,4 +66,9 @@ public class Filling implements Stand {
     return Height;
   }
 
+  @Override
+  public void changeKitchenText(IngredientDisplay inventory) {
+    inventory.getKitchenText1().setText("You picked up blueberries!");
+    inventory.getKitchenText2().setText("");
+  }
 }

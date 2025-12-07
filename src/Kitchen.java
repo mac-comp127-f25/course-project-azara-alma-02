@@ -53,4 +53,9 @@ public class Kitchen implements Stand{
     public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
         // Does not add ingredients
     }
+
+    @Override
+    public void changeKitchenText(IngredientDisplay inventory) {
+        //Not needed for the kitchen.
+    }
 }
