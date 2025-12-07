@@ -18,62 +18,62 @@ public class IngredientDisplay{
     public GraphicsText kitchenText2; 
 
     public IngredientDisplay(CanvasWindow canvas, Color backdropColor, Color boxLineColor){
-        Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.80,CANVAS_HEIGHT*0.7,CANVAS_WIDTH*0.2,CANVAS_HEIGHT*0.4);
+        Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.80,CANVAS_HEIGHT*0.6,CANVAS_WIDTH*0.2,CANVAS_HEIGHT*0.4);
         backdrop.setFillColor(backdropColor);
         canvas.add(backdrop);
        
-        GraphicsText titleText= new GraphicsText("Ingredients", CANVAS_WIDTH*0.875,CANVAS_HEIGHT*0.72);
+        GraphicsText titleText= new GraphicsText("Ingredients", CANVAS_WIDTH*0.875,CANVAS_HEIGHT*0.62);
         canvas.add(titleText);
         
         //Well
-        Rectangle waterBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.73, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
+        Rectangle waterBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.63, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
         waterBox.setStrokeColor(boxLineColor);
         canvas.add(waterBox);
-        waterBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.745);
+        waterBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.645);
         canvas.add(waterBoxText);
-        GraphicsText waterText=new GraphicsText("Water", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.745);
+        GraphicsText waterText=new GraphicsText("Water", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.645);
         canvas.add(waterText);
 
         //Mill
-        Rectangle flourBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.76, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
+        Rectangle flourBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.66, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
         flourBox.setStrokeColor(boxLineColor);
         canvas.add(flourBox);
-        flourBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.775);
+        flourBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.675);
         canvas.add(flourBoxText);
-        GraphicsText flourText=new GraphicsText("Flour", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.775);
+        GraphicsText flourText=new GraphicsText("Flour", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.675);
         canvas.add(flourText);
 
         //Sugar_Salt
-        Rectangle sugarSaltBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.79, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
+        Rectangle sugarSaltBox=new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.69, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
         sugarSaltBox.setStrokeColor(boxLineColor);
         canvas.add(sugarSaltBox);
-        sugarSaltBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.805);
+        sugarSaltBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.705);
         canvas.add(sugarSaltBoxText);
-        GraphicsText sugarSaltText=new GraphicsText("Sugar & Salt", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.805);
+        GraphicsText sugarSaltText=new GraphicsText("Sugar & Salt", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.705);
         canvas.add(sugarSaltText);
 
         //Barn 
-        Rectangle eggsButterBox= new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.82, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
+        Rectangle eggsButterBox= new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.72, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
         eggsButterBox.setStrokeColor(boxLineColor);
         canvas.add(eggsButterBox);
-        eggsButterBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.835);
+        eggsButterBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.735);
         canvas.add(eggsButterBoxText);
-        GraphicsText eggsButterText=new GraphicsText("Eggs & Butter", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.835);
+        GraphicsText eggsButterText=new GraphicsText("Eggs & Butter", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.735);
         canvas.add(eggsButterText);
         
         //Filling 
-        Rectangle blueberriesBox= new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.85, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
+        Rectangle blueberriesBox= new Rectangle(CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.75, CANVAS_WIDTH*0.02, CANVAS_HEIGHT*0.02);
         blueberriesBox.setStrokeColor(boxLineColor);
         canvas.add(blueberriesBox);
-        blueberriesBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.865);
+        blueberriesBoxText= new GraphicsText(null,CANVAS_WIDTH*0.815,CANVAS_HEIGHT*0.765);
         canvas.add(blueberriesBoxText);
-        GraphicsText blueberriesText=new GraphicsText("Blueberries", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.865);
+        GraphicsText blueberriesText=new GraphicsText("Blueberries", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.765);
         canvas.add(blueberriesText);
 
-        kitchenText1=new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.9);
+        kitchenText1=new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.8);
         canvas.add(kitchenText1);
 
-        kitchenText2= new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.93);
+        kitchenText2= new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.83);
         canvas.add(kitchenText2);
 
     }

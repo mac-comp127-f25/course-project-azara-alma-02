@@ -17,7 +17,7 @@ public class Mill implements Stand{
   double MapWidth=PieHollow.getWidth();
 
   double X = MapWidth*0.85;
-  double Y= MapHeight*0.40;
+  double Y= MapHeight*0.35;
   double Width = 200; 
   double Height =250;
 
