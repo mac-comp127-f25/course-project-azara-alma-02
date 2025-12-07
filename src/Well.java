@@ -16,7 +16,7 @@ public class Well implements Stand {
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
     
-    double X= MapWidth *0.15; 
+    double X= MapWidth *0.25; 
     double Y= MapHeight *0.55; 
     double Height= 80; 
     double Width = 80; 

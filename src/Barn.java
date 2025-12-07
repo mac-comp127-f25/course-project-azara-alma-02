@@ -19,7 +19,7 @@ public class Barn implements Stand {
   double X = MapWidth*0.4; 
   double Y= MapHeight*0.65;
   double Width = 200; 
-  double Height =200;
+  double Height = 200;
 
   // private Rectangle barnShape;
 

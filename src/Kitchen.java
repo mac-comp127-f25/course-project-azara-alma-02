@@ -11,10 +11,10 @@ public class Kitchen implements Stand{
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
 
-    private double X = MapWidth*0.05; 
-    private double Y= MapHeight*0.67;
-    private double Width = 80; 
-    private double Height = 80;
+    private double X = MapWidth*0.005; 
+    private double Y= MapHeight*0.49;
+    private double Width = 200; 
+    private double Height = 250;
     
     private Image kitchenShape;
 

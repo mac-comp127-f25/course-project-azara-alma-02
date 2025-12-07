@@ -14,5 +14,6 @@ public interface Stand {
     double getHeight();
     //Add text with the name of each stand.
     //Update kitchen text, called when interaction with baker happen.
+    //Change ingredients list to just have a pie once a pie is made. Don't forget to reset once the game resets!!!!
     
 }

@@ -12,10 +12,10 @@ public class BakeSale implements Stand {
     double MapWidth=PieHollow.getWidth();
                                                          //Need a Pie in Inventory 
 
-    private double X = MapWidth*0.9; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
-    private double Y= MapHeight*0.05;
-    private double Width = 80; 
-    private double Height =80;
+    private double X = MapWidth*0.85; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
+    private double Y= MapHeight*0.01;
+    private double Width = 180; 
+    private double Height = 180;
 
     private Image bakeSaleShape;
 

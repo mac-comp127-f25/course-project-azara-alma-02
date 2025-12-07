@@ -19,7 +19,7 @@ public class Mill implements Stand{
   double X = MapWidth*0.85;
   double Y= MapHeight*0.35;
   double Width = 200; 
-  double Height =250;
+  double Height = 250;
 
   private Image millShape;
 
