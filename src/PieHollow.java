@@ -267,6 +267,7 @@ public class PieHollow {
                 } else {
                     standGroup.remove(stand.getGraphics(Color.RED));
                     stand.addIngredients(ingredientsList, inventory); //Can create another method in each stand class that creates the pop-ups we talked about! Also, our ingredients list is showing up horizontally on the canvas, might want to change that too
+                    stand.changeKitchenText(inventory);
                     standList.remove(i); //Add here the shapes back on to the canvas after removal!
                     canvas.add(stand.getGraphics(Color.RED));
                     if(ingredientsList.size()==7){

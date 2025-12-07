@@ -64,5 +64,11 @@ public class Well implements Stand {
     public double getHeight() {
         return Height;
     }
+
+    @Override
+    public void changeKitchenText(IngredientDisplay inventory) {
+        inventory.getKitchenText1().setText("You picked up water!");
+        inventory.getKitchenText2().setText("");
+  }
     
 }

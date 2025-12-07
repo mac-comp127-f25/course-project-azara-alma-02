@@ -66,4 +66,10 @@ public class Sugar_Salt implements Stand {
    return Height;
   }
 
+  @Override
+  public void changeKitchenText(IngredientDisplay inventory) {
+    inventory.getKitchenText1().setText("You picked up sugar & salt!");
+    inventory.getKitchenText2().setText("");
+  }
+
 }

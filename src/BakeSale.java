@@ -54,4 +54,9 @@ public class BakeSale implements Stand {
         // Does not add ingredients
     }
 
+    @Override
+    public void changeKitchenText(IngredientDisplay inventory) {
+    // Not needed for bakeSale.
+    }
+
 }

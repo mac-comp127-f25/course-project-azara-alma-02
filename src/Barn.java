@@ -67,4 +67,10 @@ public class Barn implements Stand {
   public double getHeight() {
     return Height;
   }
+
+  @Override
+  public void changeKitchenText(IngredientDisplay inventory) {
+    inventory.getKitchenText1().setText("You picked up eggs & butter!");
+    inventory.getKitchenText2().setText("");
+  }
 }
