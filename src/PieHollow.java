@@ -28,7 +28,10 @@ public class PieHollow {
     public GraphicsGroup standGroup;
     public GraphicsGroup welcomeScreen;
     public GraphicsGroup winScreen;
-    private List<Stand> standList = new ArrayList<>(); 
+    private List<Stand> standList = new ArrayList<>();
+    
+    private boolean pieMade = false;
+    private static final int NEEDED_INGREDIENTS = 7;
 
     public PieHollow(){
         canvas=new CanvasWindow("PieHollow",CANVAS_WIDTH,CANVAS_HEIGHT);
@@ -41,6 +44,7 @@ public class PieHollow {
 
     private void placeElements(){
         setBackground();
+        inventory = new IngredientDisplay(canvas, BACKDROP,BOX_OUTLINE);
         makeBakeSale();
         makeKitchen();
         canvas.add(standGroup);
@@ -105,7 +109,7 @@ public class PieHollow {
 
         playButton.onClick(() -> {             
         canvas.remove(welcomeScreen);
-        inventory = new IngredientDisplay(canvas, BACKDROP,BOX_OUTLINE);
+        // inventory = new IngredientDisplay(canvas, BACKDROP,BOX_OUTLINE);
         //canvas.add(winScreen);            //Testing Purposes (will be linked to bakesale later)
         //makeWinScreen();
         makeBaker();
@@ -113,7 +117,7 @@ public class PieHollow {
         });   
     }
 
-    private void makeWinScreen(){
+    private void makeWinScreen(){ //Buttons here not quite working right yet.
         Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.30,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.285,CANVAS_HEIGHT*0.15);
         backdrop.setFillColor(BACKDROP);
         winScreen.add(backdrop);
@@ -210,13 +214,15 @@ public class PieHollow {
 
     }
     private void makeKitchen(){
-        GraphicsObject kitchen=new Kitchen().getGraphics();
-        canvas.add(kitchen);
+        Stand kitchen = new Kitchen();
+        standList.add(kitchen);
+        standGroup.add(kitchen.getGraphics(Color.RED));
 
     }
     private void makeBakeSale(){
-        GraphicsObject bakeSale = new BakeSale().getGraphics();
-        canvas.add(bakeSale);
+        Stand bakeSale = new BakeSale();
+        standList.add(bakeSale);
+        standGroup.add(bakeSale.getGraphics(Color.RED));
     }
 
    
@@ -225,16 +231,42 @@ public class PieHollow {
             Stand stand = standList.get(i);
 
             if(baker.reachesStand(stand)) {
-                standGroup.remove(stand.getGraphics(Color.RED));
-                stand.addIngredients(ingredientsList, inventory); //Can create another method in each stand class that creates the pop-ups we talked about! Also, our ingredients list is showing up horizontally on the canvas, might want to change that too
-                standList.remove(i); //Add here the shapes back on to the canvas after removal!
-                canvas.add(stand.getGraphics(Color.RED));
-                if(ingredientsList.size()==7){
-                    inventory.getKitchenText1().setText("The kitchen is open");
-                    inventory.getKitchenText2().setText("Go make your pie!"); 
-                }
-
-                return;
+                String standName = stand.getName();
+                if (standName == "Katie's Kitchen") {
+                    if (!pieMade && ingredientsList.size() >= NEEDED_INGREDIENTS) {
+                        ingredientsList.clear();
+                        pieMade = true;
+                        inventory.getKitchenText1().setText("PIE MADE!"); // Want to change this so now the ingredients list just says pie, after intearction with the kitchen.
+                        inventory.getKitchenText2().setText("Go to the Bake Sale!"); // WOuld be cool if these things showed up somewhere, but not quite sure how to do that, might have misinterpreted this methods purpose
+                    } else if(pieMade) {
+                        inventory.getKitchenText1().setText("You have a pie.");
+                        inventory.getKitchenText2().setText("Sell it at the bake sale now!");
+                    } else {
+                        int neededIngredients = NEEDED_INGREDIENTS - ingredientsList.size();
+                        inventory.getKitchenText1().setText("You are missing some ingredients!");
+                        inventory.getKitchenText2().setText(neededIngredients + " more needed.");
+                    }
+                    return;
+                } else if (standName == "Bobbi's Bake Sale") {
+                    if (pieMade) {
+                    canvas.add(winScreen);
+                    makeWinScreen();
+                    } else {
+                        inventory.getKitchenText1().setText("No Pie to Sell!"); // not sure how to use getKitchenText!!
+                        inventory.getKitchenText2().setText("Visit the Kitchen first.");
+                    }
+                    return;
+                } else {
+                    standGroup.remove(stand.getGraphics(Color.RED));
+                    stand.addIngredients(ingredientsList, inventory); //Can create another method in each stand class that creates the pop-ups we talked about! Also, our ingredients list is showing up horizontally on the canvas, might want to change that too
+                    standList.remove(i); //Add here the shapes back on to the canvas after removal!
+                    canvas.add(stand.getGraphics(Color.RED));
+                    if(ingredientsList.size()==7){
+                        inventory.getKitchenText1().setText("The kitchen is open");
+                        inventory.getKitchenText2().setText("Go make your pie!"); 
+                    }
+                    return;
+                }    
             }
         }
     }

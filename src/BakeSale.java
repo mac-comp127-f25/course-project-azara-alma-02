@@ -1,7 +1,10 @@
+import java.awt.Color;
+import java.util.List;
+
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Rectangle;
 
-public class BakeSale {
+public class BakeSale implements Stand {
     String name = "Bobbi's Bake Sale"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
     
     double MapHeight = PieHollow.getHeight();
@@ -13,6 +16,8 @@ public class BakeSale {
     private double Width = 40; 
     private double Height =20;
 
+    private Rectangle bakeSaleShape;
+
     public BakeSale(){
     }
 
@@ -20,9 +25,30 @@ public class BakeSale {
         return name;
     }
 
-    public GraphicsObject getGraphics(){
-        Rectangle bakeSaleShape = new Rectangle(X, Y, Width, Height);
+    public GraphicsObject getGraphics(Color color){
+        if (bakeSaleShape == null) {
+            bakeSaleShape = new Rectangle(X, Y, Width, Height);
+        }
         return bakeSaleShape;
-
     }
+    public double getX() {
+        return X;
+    }
+
+    public double getY() {
+        return Y;
+    }
+
+    public double getWidth() {
+        return Width;
+    }
+
+    public double getHeight() {
+        return Height;
+    }
+
+    public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
+        // Does not add ingredients
+    }
+
 }

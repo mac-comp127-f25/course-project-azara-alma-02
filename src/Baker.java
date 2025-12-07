@@ -11,7 +11,7 @@ public class Baker {
     private double y;
     private final double SIZE = 60;
     private final double SPEED = 10;
-    private static final double INTERACTION_WIDTH = 10;
+    // private static final double INTERACTION_WIDTH = 2; got rid of interaction width for now, did not feel necessary when playing the game.
 
     private Image bakerShape;
     
@@ -73,10 +73,10 @@ public class Baker {
         double topBakerBound = this.y;
         double bottomBakerBound = this.y + SIZE;
 
-        double leftStandBound = stand.getX() - INTERACTION_WIDTH; //- so it can extend out to the left, same for reaching up with topStandBound.
-        double rightStandBound = stand.getX() + stand.getWidth() + INTERACTION_WIDTH;
-        double topStandBound = stand.getY() - INTERACTION_WIDTH;
-        double bottomStandBound = stand.getY() + stand.getHeight() + INTERACTION_WIDTH;
+        double leftStandBound = stand.getX(); //- so it can extend out to the left, same for reaching up with topStandBound.
+        double rightStandBound = stand.getX() + stand.getWidth();
+        double topStandBound = stand.getY();
+        double bottomStandBound = stand.getY() + stand.getHeight();
         
         boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound; //Lol thanks conceptual mastery puzzles.
         boolean yCollision = topBakerBound < bottomStandBound && bottomBakerBound > topStandBound;
