@@ -17,8 +17,8 @@ public class Sugar_Salt implements Stand {
 
   double X = MapWidth*0.1;
   double Y= MapHeight*0.2;
-  double Width = 80; 
-  double Height = 80;
+  double Width = 150; 
+  double Height = 150;
 
   private Image sugarSaltShape;
 
