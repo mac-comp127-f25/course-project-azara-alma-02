@@ -56,7 +56,7 @@ public class BakeSale implements Stand {
 
     @Override
     public void changeKitchenText(IngredientDisplay inventory) {
-    // Not needed for bakeSale.
+        // Not needed for bakeSale.
     }
 
 }
