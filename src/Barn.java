@@ -1,7 +1,3 @@
-/*
-Eggs and Butter
- */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.Color;
@@ -10,7 +6,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class Barn implements Stand {
   String name = "Bailey's Barn"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
 

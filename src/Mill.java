@@ -1,7 +1,3 @@
-/*
-   Flour
- */
-
 import java.util.List;
 import java.awt.Color;
 
@@ -9,7 +5,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class Mill implements Stand{
   String name = "Milson's Mill";
 
@@ -31,7 +30,7 @@ public class Mill implements Stand{
   @Override
   public GraphicsObject getGraphics(Color color){
     if (millShape == null) {
-            millShape = new Image(X, Y, "MillImage.png"); //Maybe move on canvas a bit
+            millShape = new Image(X, Y, "MillImage.png"); 
             millShape.setMaxWidth(Width);
             millShape.setMaxHeight(Height);
         }

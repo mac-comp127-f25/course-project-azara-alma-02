@@ -5,6 +5,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 
 
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public interface Stand {                                  
     void addIngredients(List ingredientsList, IngredientDisplay inventory);   //Add Graphics Text for Ingredients label 
     String getName();
@@ -15,8 +19,6 @@ public interface Stand {
     double getWidth();
     double getHeight();
     void changeKitchenText(IngredientDisplay inventory);
-    //Add text with the name of each stand.
-    //Move baker slightly down
-    //Change ingredients list to just have a pie once a pie is made. Don't forget to reset once the game resets!!!!
+    //TODO: Change ingredients list to just have a pie once a pie is made. Don't forget to reset once the game resets!!!!
     
 }

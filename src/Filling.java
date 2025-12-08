@@ -1,7 +1,3 @@
-/*
-  Fruits filling. (Blueberries)
- */
-
 import java.util.List;
 import java.awt.Color;
 
@@ -9,7 +5,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class Filling implements Stand {
   String name = "Bridget's Blueberries";
 
@@ -40,7 +39,7 @@ public class Filling implements Stand {
     
   @Override
   public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
-    ingredientsList.add("Blueberries"); // Will need to change the code for this class to allow for the selection of different fillings.
+    ingredientsList.add("Blueberries"); 
     inventory.getBlueberriesBoxText().setText("X");
 
 

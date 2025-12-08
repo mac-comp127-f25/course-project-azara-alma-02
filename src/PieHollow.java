@@ -10,7 +10,10 @@ import edu.macalester.graphics.Rectangle;
 import edu.macalester.graphics.events.Key;
 import edu.macalester.graphics.ui.Button;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class PieHollow {
     CanvasWindow canvas; 
 
@@ -43,6 +46,9 @@ public class PieHollow {
     
     }
 
+    /*
+    * Sets up the initial state of the canvas before the PieHollow Game begins. 
+     */
     private void placeElements(){
         setBackground();
         inventory = new IngredientDisplay(canvas, BACKDROP,BOX_OUTLINE);
@@ -56,7 +62,12 @@ public class PieHollow {
         
     }
 
-     private void KeyMoved(){
+    /*
+    * Checks which key was pressed by the user and calls the appropriate baker method to update the baker's position based on the key pressed. 
+    * Animates the baker's movement continously and calls checkInteractions after every key press to see if the baker has hit an applicable 
+    * GraphicsObject. 
+     */
+     private void keyMoved(){
        canvas.animate(()->{
          for(Key key:canvas.getKeysPressed()){
             if (key.equals(Key.RIGHT_ARROW)){
@@ -76,6 +87,11 @@ public class PieHollow {
         });
     }
 
+    /*
+    * Adds elements to the welcomeScreen GraphicsGroup which give the user instrcutions on how to play the game. Contains a play button which 
+    removes the welcomeScreen from the canvas and calls makeBaker() and keyMoved to set up the window for the user to begin playing PieHollow. 
+
+     */
     private void makeWelcomeScreen(){
         Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.2);
         backdrop.setFillColor(BACKDROP);
@@ -114,10 +130,15 @@ public class PieHollow {
         playButton.onClick(() -> {             
         canvas.remove(welcomeScreen);
         makeBaker();
-        KeyMoved(); 
+        keyMoved(); 
         });   
     }
 
+    /*
+    * Adds elements to the winScreen GraphicsGroup, which contains the win message the user sees upon succesfully completing the game. Creates a 
+    play again buttton and an exit button, which closes the window, so the user can chose to leave the game or playagain. Contains callbacks to 
+    each button. playAgainButton's callback resets canvas, standGroup, pie elements, and removes winScreen from the canvas. 
+     */
     private void makeWinScreen(){ 
         Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.30,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.285,CANVAS_HEIGHT*0.15);
         backdrop.setFillColor(BACKDROP);
@@ -153,14 +174,12 @@ public class PieHollow {
         });
 
         playAgainButton.onClick(()->{
-            
             inventory.getEggsButterBoxText().setText(null);
             inventory.getBlueberriesBoxText().setText(null);
             inventory.getFlourBoxText().setText(null);
             inventory.getSugarSaltBoxText().setText(null);
             inventory.getWaterBoxText().setText(null);
 
-           
             for (int i=6; i<ingredientsList.size();i--){
                 ingredientsList.remove(i);
             }
@@ -176,25 +195,41 @@ public class PieHollow {
         });
     }
 
+    /*
+    * Calls placeElements to set up the initial state of pieHollow's screen.
+     */
     private void playGame(){
        placeElements();
     }
 
+    /*
+    * Returns the canvas height.
+     */
     public static double getHeight(){
         return CANVAS_HEIGHT;
     }
 
+    /*
+    * Returns the canvas width. 
+     */
     public static double getWidth(){
         return CANVAS_WIDTH;
     }
 
     // Elements
+
+    /*
+    *Sets the width and height of PieHollow's background map image and adds it to the canvas. 
+     */
     private void setBackground(){
         PieHollowMapImage.setMaxWidth(CANVAS_WIDTH);
         PieHollowMapImage.setMaxHeight(CANVAS_HEIGHT);
         canvas.add(PieHollowMapImage);
     }
 
+    /* 
+    * Creates each ingredient stand, adds it to standlist, adds its label to the canvas, and adds its graphics to the standGroup. 
+     */
     private void makeStands(){
         Stand barn = new Barn();
         Stand filling = new Filling();
@@ -221,11 +256,17 @@ public class PieHollow {
         standGroup.add(well.getGraphics(Color.BLACK));
     }
 
+    /*
+    * Creates an instance of the baker class and adds its graphics to the canvas. 
+     */
     private void makeBaker(){
         baker = new Baker(CANVAS_WIDTH*0.061,CANVAS_HEIGHT*0.56);
         canvas.add(baker.getGraphics());
     }
 
+    /* 
+    * Intializes bobbiImage and adds it to the canvas. 
+     */
     private void makeBobbi(){
        bobbiImage=new Image(CANVAS_WIDTH*0.77, CANVAS_HEIGHT*0.13,"BobbiImage.png");
        bobbiImage.setMaxWidth(60);
@@ -234,6 +275,10 @@ public class PieHollow {
 
     }
 
+    /* 
+    * Creates an instace of the Kitchen class (kitchen), adds it to the standlist, adds it's graphics to the standGroup, and add's the kitchen's
+     label to the canvas
+     */
     private void makeKitchen(){
         Stand kitchen = new Kitchen();
         standList.add(kitchen);
@@ -241,6 +286,10 @@ public class PieHollow {
         canvas.add(kitchen.setLabel());
     }
 
+    /* 
+    *Creates an instace of the BakeSale (bakeSale) class, adds it to the standlist, adds it's graphics to the standGroup, and add's the bakeSale's 
+    label to the canvas
+     */
     private void makeBakeSale(){
         Stand bakeSale = new BakeSale();
         standList.add(bakeSale);

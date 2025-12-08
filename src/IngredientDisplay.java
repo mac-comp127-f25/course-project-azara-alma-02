@@ -4,6 +4,12 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Rectangle;
 
+/*
+ * Authors: Alma and Azara 
+ * This creates a display in PieHollow that tells the user what ingredients they need to get gives them directions on what to do during the game, 
+ * and creates a more engaging game experience as the display is updated in the pieHollow and stand class with updated directions, ingredients 
+ * in the user's inventory and fun insights into NPC's lives. It utlizes a rectangle as the background and graphicsTexts. 
+ */
 public class IngredientDisplay{
 
     double CANVAS_HEIGHT = PieHollow.getHeight();
@@ -70,38 +76,58 @@ public class IngredientDisplay{
         GraphicsText blueberriesText=new GraphicsText("Blueberries", CANVAS_WIDTH*0.84,CANVAS_HEIGHT*0.765);
         canvas.add(blueberriesText);
 
+        //Kitchen Text
         kitchenText1=new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.8);
         canvas.add(kitchenText1);
-
         kitchenText2= new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.83);
         canvas.add(kitchenText2);
     }
 
+    /* 
+    * Returns waterBoxText
+     */
     public GraphicsText getWaterBoxText(){
         return waterBoxText;
     }
 
+    /*
+    * Returns flourBoxText
+     */
     public GraphicsText getFlourBoxText(){
         return flourBoxText; 
     }
 
+    /*
+    * Returns sugarSaltBoxText
+     */
     public GraphicsText getSugarSaltBoxText(){
         return sugarSaltBoxText;
     }
 
+    /*
+    * Returns eggsButterBoxText
+    */
     public GraphicsText getEggsButterBoxText(){
         return eggsButterBoxText;
     }
 
+    /*
+    * Returns blueberriesBoxTect
+     */
     public GraphicsText getBlueberriesBoxText(){
         return blueberriesBoxText; 
     }
 
+    /*
+    * Returns kitchenText1
+     */
     public GraphicsText getKitchenText1(){
         return kitchenText1;
     }
 
-
+    /*
+    * Returns kitchenText 2
+     */
     public GraphicsText getKitchenText2(){
         return kitchenText2; 
     }

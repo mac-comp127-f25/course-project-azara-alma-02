@@ -1,7 +1,10 @@
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class Baker {
     //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.
     double MapHeight = PieHollow.getHeight();
@@ -17,7 +20,7 @@ public class Baker {
     
     public Baker(double startX, double startY) { //Start position on canvas determined in constructor, not in getGraphics.
         this.x = startX;
-        this.y = startY; //Have her genrate at the kitchen!!
+        this.y = startY; 
     }
     public double getX() {
         return x;
@@ -36,14 +39,11 @@ public class Baker {
        bakerShape.setPosition(newX, newY);   
     }
 
-
-    //Consider Baker size
-
     public void leftPressed(){
         if(x>0){
         this.x-=SPEED;                                              
         }                            
-        updatePosition(x, y);        //Add collison checker 
+        updatePosition(x, y);       
     }
 
     public void rightPressed(){

@@ -5,7 +5,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class BakeSale implements Stand {
     String name = "Bobbi's Bake Sale"; 
     
