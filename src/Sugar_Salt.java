@@ -26,7 +26,6 @@ public class Sugar_Salt implements Stand {
     return name;
   }
 
-  
   @Override
   public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
     ingredientsList.add("Sugar");
@@ -73,8 +72,7 @@ public class Sugar_Salt implements Stand {
   @Override
   public GraphicsText setLabel() {
     GraphicsText sugarSaltLabel=new GraphicsText(name, X+5, Y+Height+10);
-    return sugarSaltLabel;
-   
+    return sugarSaltLabel; 
   }
 
 }

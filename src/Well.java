@@ -33,7 +33,6 @@ public class Well implements Stand {
         return name; 
     }
 
-
     @Override
     public GraphicsObject getGraphics(Color color) {
     if (wellShape == null) {
@@ -74,8 +73,6 @@ public class Well implements Stand {
     public GraphicsText setLabel() {
         GraphicsText wellLabel=new GraphicsText(name, X, Y+Height+5);
         return wellLabel;
-    
     }
-
-    
+      
 }

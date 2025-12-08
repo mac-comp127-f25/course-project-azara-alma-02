@@ -9,36 +9,26 @@ public class Baker {
     //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.
     double MapHeight = PieHollow.getHeight();
     double MapWidth= PieHollow.getWidth();
-    
+
     private double x;
     private double y;
     private final double SIZE = 60;
     private final double SPEED = 5;
-    // private static final double INTERACTION_WIDTH = 2; got rid of interaction width for now, did not feel necessary when playing the game.
 
     private Image bakerShape;
     
-    public Baker(double startX, double startY) { //Start position on canvas determined in constructor, not in getGraphics.
+    public Baker(double startX, double startY) { 
         this.x = startX;
         this.y = startY; 
     }
-    public double getX() {
-        return x;
-    }
-    public double getY() {
-        return y;
-    }
-    public double getSize() { // Just made these so we can use outside of the class.
-        return SIZE;
-    }
-    public double getSpeed() {
-        return SPEED;
-    }
 
-    public void updatePosition(double newX, double newY) { // I think in the main gain method we have movements that create nex xs/ys depending on key movements, and each like if statement calla this method to move the baker. Model a bit off of breakout.
+    public void updatePosition(double newX, double newY) { 
        bakerShape.setPosition(newX, newY);   
     }
 
+    /*
+    * Moves the baker SPEED pixels to the left if they are not at the left edge of the window.
+    */
     public void leftPressed(){
         if(x>0){
         this.x-=SPEED;                                              
@@ -46,6 +36,9 @@ public class Baker {
         updatePosition(x, y);       
     }
 
+    /*
+    * Moves the baker SPEED pixels to the right if they are not at the right edge of the window.
+    */
     public void rightPressed(){
         if (x+SIZE<MapWidth-2){
             this.x+=SPEED;
@@ -53,6 +46,9 @@ public class Baker {
         updatePosition(x, y); 
     }
 
+    /*
+    * Moves the baker SPEED pixels up if they are not at the top edge of the window. 
+    */
     public void upPressed(){
         if (y>0){
             this.y-=SPEED;
@@ -60,6 +56,9 @@ public class Baker {
         updatePosition(x, y);
     }
 
+    /*
+    * Moves the baker SPEED pixels down if they are not at the bottom edge of the window. 
+    */
     public void downPressed(){
         if(y+SIZE<MapHeight-30){
             this.y+=SPEED;
@@ -84,11 +83,26 @@ public class Baker {
         return xCollision && yCollision;
     }
 
+    //GETTER METHODS
+    
     public GraphicsObject getGraphics(){
         bakerShape = new Image(x, y, "BakerImage.png");
         bakerShape.setMaxWidth(SIZE);
         bakerShape.setMaxHeight(SIZE);
 
         return bakerShape;
-  }
+    }
+
+      public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
+    }
+    public double getSize() { 
+        return SIZE;
+    }
+    public double getSpeed() {
+        return SPEED;
+    }
 }
