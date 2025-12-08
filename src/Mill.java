@@ -68,7 +68,7 @@ public class Mill implements Stand{
   @Override
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up flour!");
-    inventory.getKitchenText2().setText("");
+    inventory.getKitchenText2().setText("Milson got a magical mirror!");
   }
   @Override
   public GraphicsText setLabel() {

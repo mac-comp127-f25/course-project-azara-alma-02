@@ -15,7 +15,7 @@ import edu.macalester.graphics.ui.Button;
 public class PieHollow {
     CanvasWindow canvas; 
 
-    public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap3.png");
+    public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
     private Baker baker;
     public IngredientDisplay inventory; 
 

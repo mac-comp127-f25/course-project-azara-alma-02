@@ -69,7 +69,7 @@ public class Filling implements Stand {
   @Override
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up blueberries!");
-    inventory.getKitchenText2().setText("");
+    inventory.getKitchenText2().setText("Bridget recently had a baby!");
   }
   @Override
   public GraphicsText setLabel() {
