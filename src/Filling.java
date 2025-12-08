@@ -11,7 +11,7 @@ import edu.macalester.graphics.Image;
 
 
 public class Filling implements Stand {
-  String name = "Fabulous Fruits";
+  String name = "Bridget's Blueberries";
 
   double MapHeight = PieHollow.getHeight();
   double MapWidth=PieHollow.getWidth();
@@ -70,5 +70,11 @@ public class Filling implements Stand {
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up blueberries!");
     inventory.getKitchenText2().setText("");
+  }
+  @Override
+  public GraphicsText setLabel() {
+    GraphicsText fillingLabel=new GraphicsText(name, X+5, Y+Height-7);
+    return fillingLabel;
+   
   }
 }

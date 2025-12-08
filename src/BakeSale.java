@@ -2,8 +2,9 @@ import java.awt.Color;
 import java.util.List;
 
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
+
 
 public class BakeSale implements Stand {
     String name = "Bobbi's Bake Sale"; 
@@ -57,5 +58,12 @@ public class BakeSale implements Stand {
     public void changeKitchenText(IngredientDisplay inventory) {
         // Not needed for bakeSale.
     }
+
+    @Override
+    public GraphicsText setLabel() {
+        GraphicsText bakeSaleLabel=new GraphicsText(name, X+20, Y+Height+5);
+        return bakeSaleLabel;
+    }
+
 
 }

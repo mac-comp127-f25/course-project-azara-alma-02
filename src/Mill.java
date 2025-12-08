@@ -19,7 +19,7 @@ public class Mill implements Stand{
   double X = MapWidth*0.85;
   double Y= MapHeight*0.35;
   double Width = 200; 
-  double Height = 250;
+  double Height = 200;
 
   private Image millShape;
 
@@ -69,5 +69,11 @@ public class Mill implements Stand{
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up flour!");
     inventory.getKitchenText2().setText("");
+  }
+  @Override
+  public GraphicsText setLabel() {
+    GraphicsText millLabel=new GraphicsText(name, X+50, Y+Height);
+    return millLabel;
+   
   }
 }

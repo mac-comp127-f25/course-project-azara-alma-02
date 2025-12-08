@@ -2,6 +2,7 @@
 Eggs and Butter
  */
 
+import java.util.ArrayList;
 import java.util.List;
 import java.awt.Color;
 
@@ -72,5 +73,12 @@ public class Barn implements Stand {
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up eggs & butter!");
     inventory.getKitchenText2().setText("");
+  }
+
+  @Override
+  public GraphicsText setLabel() {
+    GraphicsText barnLabel=new GraphicsText(name, X+30, Y+Height-7);
+    return barnLabel;
+   
   }
 }

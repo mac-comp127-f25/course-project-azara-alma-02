@@ -203,10 +203,16 @@ public class PieHollow {
         Stand well = new Well();
 
         standList.add(barn); //I added this so we can iterate over the stands, so now they exist seperately to their graphics objects
+        canvas.add(barn.setLabel());
         standList.add(filling);
+        canvas.add(filling.setLabel());
         standList.add(mill);
+        canvas.add(mill.setLabel());
         standList.add(sugarSalt);
+        canvas.add(sugarSalt.setLabel());
         standList.add(well);
+        canvas.add(well.setLabel());
+
 
         standGroup.add(barn.getGraphics(Color.RED));
         standGroup.add(filling.getGraphics(Color.BLUE));
@@ -224,12 +230,14 @@ public class PieHollow {
         Stand kitchen = new Kitchen();
         standList.add(kitchen);
         standGroup.add(kitchen.getGraphics(Color.RED));
+        canvas.add(kitchen.setLabel());
     }
 
     private void makeBakeSale(){
         Stand bakeSale = new BakeSale();
         standList.add(bakeSale);
         standGroup.add(bakeSale.getGraphics(Color.RED));
+        canvas.add(bakeSale.setLabel());
     }
   
     private void checkInteractions() {

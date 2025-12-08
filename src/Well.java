@@ -12,7 +12,7 @@ import edu.macalester.graphics.Image;
 
 public class Well implements Stand {
 
-    String name ="Well";
+    String name ="The Wishing Well";
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
     
@@ -69,6 +69,14 @@ public class Well implements Stand {
     public void changeKitchenText(IngredientDisplay inventory) {
         inventory.getKitchenText1().setText("You picked up water!");
         inventory.getKitchenText2().setText("");
-  }
+    }
+    
+    @Override
+    public GraphicsText setLabel() {
+        GraphicsText wellLabel=new GraphicsText(name, X, Y+Height+5);
+        return wellLabel;
+    
+    }
+
     
 }

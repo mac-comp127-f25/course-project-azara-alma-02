@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.util.List;
 
 import edu.macalester.graphics.GraphicsObject;
+import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
@@ -14,7 +15,7 @@ public class Kitchen implements Stand{
     private double X = MapWidth*0.002; 
     private double Y= MapHeight*0.4;
     private double Width = 180; 
-    private double Height = 300;
+    private double Height = 200;
     
     private Image kitchenShape;
 
@@ -58,4 +59,12 @@ public class Kitchen implements Stand{
     public void changeKitchenText(IngredientDisplay inventory) {
         //Not needed for the kitchen.
     }
+
+    @Override
+    public GraphicsText setLabel() {
+        GraphicsText kitchenLabel=new GraphicsText(name, X+20, Y+Height-2);
+        return kitchenLabel;
+   
+  }
+
 }
