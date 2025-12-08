@@ -10,7 +10,7 @@ public class Baker {
     private double x;
     private double y;
     private final double SIZE = 60;
-    private final double SPEED = 10;
+    private final double SPEED = 5;
     // private static final double INTERACTION_WIDTH = 2; got rid of interaction width for now, did not feel necessary when playing the game.
 
     private Image bakerShape;
