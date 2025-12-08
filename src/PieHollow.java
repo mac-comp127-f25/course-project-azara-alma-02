@@ -109,9 +109,6 @@ public class PieHollow {
 
         playButton.onClick(() -> {             
         canvas.remove(welcomeScreen);
-        // inventory = new IngredientDisplay(canvas, BACKDROP,BOX_OUTLINE);
-        //canvas.add(winScreen);            //Testing Purposes (will be linked to bakesale later)
-        //makeWinScreen();
         makeBaker();
         KeyMoved(); 
         });   
@@ -169,7 +166,6 @@ public class PieHollow {
             makeStands();
             makeBakeSale();
             makeKitchen();
-            //inventory.addIngredientText(canvas);
 
             canvas.remove(winScreen);
             
@@ -250,7 +246,6 @@ public class PieHollow {
                     if (!pieMade && ingredientsList.size() >= NEEDED_INGREDIENTS) {
                         ingredientsList.clear();
                         pieMade = true;
-                        //inventory.clearIngredientText(canvas);
                         inventory.getKitchenText1().setText("Pie made!"); // Want to change this so now the ingredients list just says pie, after intearction with the kitchen.
                         inventory.getKitchenText2().setText("Go to the Bake Sale!"); // Would be cool if these things showed up somewhere, but not quite sure how to do that, might have misinterpreted this methods purpose
                     } else if(pieMade) {
