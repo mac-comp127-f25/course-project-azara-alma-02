@@ -18,8 +18,8 @@ public class Well implements Stand {
     
     double X= MapWidth *0.25; 
     double Y= MapHeight *0.55; 
-    double Height= 80; 
-    double Width = 80; 
+    double Height= 100; 
+    double Width = 100; 
 
     private Image wellShape; 
 

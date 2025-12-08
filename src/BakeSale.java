@@ -6,14 +6,13 @@ import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
 public class BakeSale implements Stand {
-    String name = "Bobbi's Bake Sale"; // I thought it might be fun to do cute alliteration for all the stand names, but toatally happy with whatever!
+    String name = "Bobbi's Bake Sale"; 
     
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
-                                                         //Need a Pie in Inventory 
-
-    private double X = MapWidth*0.85; // I kept these dimensions the same as Sugar & Salt just cause I wasn't sure what we would want.
-    private double Y= MapHeight*0.01;
+                                           
+    private double X = MapWidth*0.79; 
+    private double Y= MapHeight*0;
     private double Width = 180; 
     private double Height = 180;
 

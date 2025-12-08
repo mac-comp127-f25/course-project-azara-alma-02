@@ -75,7 +75,6 @@ public class IngredientDisplay{
 
         kitchenText2= new GraphicsText(null, CANVAS_WIDTH*0.81, CANVAS_HEIGHT*0.83);
         canvas.add(kitchenText2);
-
     }
 
     public GraphicsText getWaterBoxText(){

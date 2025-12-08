@@ -15,7 +15,7 @@ import edu.macalester.graphics.ui.Button;
 public class PieHollow {
     CanvasWindow canvas; 
 
-    public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap.png");
+    public static Image PieHollowMapImage =new Image(0, 0, "PieHollowMap3.png");
     private Baker baker;
     public IngredientDisplay inventory; 
 
@@ -176,7 +176,6 @@ public class PieHollow {
         });
     }
 
-
     private void playGame(){
        placeElements();
     }
@@ -217,23 +216,22 @@ public class PieHollow {
     }
 
     private void makeBaker(){
-        baker = new Baker(CANVAS_WIDTH*0.08,CANVAS_HEIGHT*0.6);
+        baker = new Baker(CANVAS_WIDTH*0.061,CANVAS_HEIGHT*0.56);
         canvas.add(baker.getGraphics());
-
     }
+
     private void makeKitchen(){
         Stand kitchen = new Kitchen();
         standList.add(kitchen);
         standGroup.add(kitchen.getGraphics(Color.RED));
-
     }
+
     private void makeBakeSale(){
         Stand bakeSale = new BakeSale();
         standList.add(bakeSale);
         standGroup.add(bakeSale.getGraphics(Color.RED));
     }
-
-   
+  
     private void checkInteractions() {
         for(int i = standList.size() - 1; i >= 0; i--) { //Did this backward so elements can be removed safely.
             Stand stand = standList.get(i);

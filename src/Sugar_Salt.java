@@ -15,7 +15,7 @@ public class Sugar_Salt implements Stand {
   double MapHeight = PieHollow.getHeight();
   double MapWidth=PieHollow.getWidth();
 
-  double X = MapWidth*0.1;
+  double X = MapWidth*0.23;
   double Y= MapHeight*0.2;
   double Width = 150; 
   double Height = 150;
