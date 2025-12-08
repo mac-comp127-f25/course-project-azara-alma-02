@@ -39,7 +39,7 @@ public class Sugar_Salt implements Stand {
   @Override
   public GraphicsObject getGraphics(Color color) {
     if (sugarSaltShape == null) {
-            sugarSaltShape = new Image(X, Y, "SaltSugarAlternate.png"); //Consider changing this image, does not really match others.
+            sugarSaltShape = new Image(X, Y, "SugarSaltImage.png"); //Consider changing this image, does not really match others.
             sugarSaltShape.setMaxWidth(Width);
             sugarSaltShape.setMaxHeight(Height);
         }
@@ -69,7 +69,7 @@ public class Sugar_Salt implements Stand {
   @Override
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up sugar & salt!");
-    inventory.getKitchenText2().setText("");
+    inventory.getKitchenText2().setText("Carrie's cat wanted to cuddle!");
   }
   @Override
   public GraphicsText setLabel() {

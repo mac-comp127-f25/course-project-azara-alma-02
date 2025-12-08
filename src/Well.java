@@ -68,7 +68,7 @@ public class Well implements Stand {
     @Override
     public void changeKitchenText(IngredientDisplay inventory) {
         inventory.getKitchenText1().setText("You picked up water!");
-        inventory.getKitchenText2().setText("");
+        inventory.getKitchenText2().setText("You met a whimsical wanderer!");
     }
     
     @Override
