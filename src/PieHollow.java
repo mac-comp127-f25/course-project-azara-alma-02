@@ -117,7 +117,7 @@ public class PieHollow {
                         inventory.getKitchenText2().setText("Sell it at the bake sale now!");
                     } else {
                         int neededIngredients = NEEDED_INGREDIENTS - ingredientsList.size();
-                        inventory.getKitchenText1().setText("You are missing some ingredients!");
+                        inventory.getKitchenText1().setText("You need some ingredients!");
                         inventory.getKitchenText2().setText(neededIngredients + " more needed.");
                     }
                     return;
