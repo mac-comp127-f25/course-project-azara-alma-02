@@ -103,8 +103,9 @@ public class PieHollow {
                     if (!pieMade && ingredientsList.size() >= NEEDED_INGREDIENTS) {
                         ingredientsList.clear();
                         pieMade = true;
-                        inventory.getKitchenText1().setText("Pie made!"); 
-                        inventory.getKitchenText2().setText("Go to the Bake Sale!"); 
+                        inventory.getKitchenText1().setText("You made a pie!"); 
+                        inventory.getKitchenText2().setText("Sell it at the bake sale now!");
+                    } else if(pieMade) { 
                         inventory.getKitchenText1().setText("You made a pie!");
                         inventory.getKitchenText2().setText("Sell it at the bake sale now!");
                     } else {
@@ -335,6 +336,7 @@ public class PieHollow {
             canvas.remove(winScreen); 
         });
     }
+
     public static void main(String[] args) {
         new PieHollow();
     }
