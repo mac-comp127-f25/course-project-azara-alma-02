@@ -26,7 +26,8 @@ public class PieHollow {
 
     private Image bobbiImage;
     private Baker baker;
-    public IngredientDisplay inventory; 
+    public IngredientDisplay inventory;
+    public PieScreen pieScreen; 
 
     List<String> ingredientsList= new ArrayList<>();
     public GraphicsGroup standGroup;
@@ -35,6 +36,7 @@ public class PieHollow {
     private List<Stand> standList = new ArrayList<>();
     
     private boolean pieMade = false;
+    private boolean pieScreenPresent = false;
     private static final int NEEDED_INGREDIENTS = 7;
 
     public PieHollow(){
@@ -42,6 +44,7 @@ public class PieHollow {
         this.standGroup=new GraphicsGroup();
         this.welcomeScreen=new GraphicsGroup();
         this.winScreen=new GraphicsGroup();
+        this.pieScreen = new PieScreen();
         playGame();
 
     }
@@ -105,7 +108,11 @@ public class PieHollow {
                         pieMade = true;
                         inventory.getKitchenText1().setText("You made a pie!"); 
                         inventory.getKitchenText2().setText("Sell it at the bake sale now!");
-                    } else if(pieMade) { 
+                        if(!pieScreenPresent) {
+                            pieScreen.addScreen(canvas, BACKDROP); 
+                            pieScreenPresent = true;
+                        }    
+                    } else if (pieMade) { 
                         inventory.getKitchenText1().setText("You made a pie!");
                         inventory.getKitchenText2().setText("Sell it at the bake sale now!");
                     } else {
@@ -330,6 +337,8 @@ public class PieHollow {
                 ingredientsList.remove(i);
             }
             pieMade=false;
+            pieScreen.removeScreen(canvas);
+            pieScreenPresent = false;
             makeStands();
             makeBakeSale();
             makeKitchen();
