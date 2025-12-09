@@ -6,8 +6,12 @@ import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
 
+/*
+* Authors: Alma and Azara
+* TODO: add description of class and methods
+*/
 public class Kitchen implements Stand{ 
-    String name = "Katie's Kitchen";                   //Make a Pie Image-add pie to ingredients list --have graphics text changed to be a pie
+    String name = "Katie's Kitchen";                   //TODO: Make a Pie Image-add pie to ingredients list --have graphics text changed to be a pie
     
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
@@ -52,7 +56,7 @@ public class Kitchen implements Stand{
     }
 
     public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
-        // Does not add ingredients
+        // Does not add ingredients to ingredientList
     }
 
     @Override

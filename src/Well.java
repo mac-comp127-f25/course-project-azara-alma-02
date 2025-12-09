@@ -1,7 +1,3 @@
-/*
-Water 
- */
-
 import java.util.List;
 import java.awt.Color;
 
@@ -9,7 +5,10 @@ import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
 
-
+/*
+* Authors: Alma and Azara
+*  TODO: add description of class and methods
+*/
 public class Well implements Stand {
 
     String name ="The Wishing Well";
@@ -33,7 +32,6 @@ public class Well implements Stand {
     public String getName() {
         return name; 
     }
-
 
     @Override
     public GraphicsObject getGraphics(Color color) {
@@ -75,8 +73,6 @@ public class Well implements Stand {
     public GraphicsText setLabel() {
         GraphicsText wellLabel=new GraphicsText(name, X, Y+Height+5);
         return wellLabel;
-    
     }
-
-    
+      
 }
