@@ -1,7 +1,6 @@
 import java.awt.Color;
 
 import edu.macalester.graphics.CanvasWindow;
-import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Rectangle;
 
@@ -106,13 +105,6 @@ public class IngredientDisplay{
     public GraphicsText getKitchenText2(){
         return kitchenText2; 
     }
-
-    public void pieMadeBox(CanvasWindow canvas, Color backdropColor) {
-        Rectangle coverBox = new Rectangle(CANVAS_WIDTH*0.80,CANVAS_HEIGHT*0.6,CANVAS_WIDTH*0.2,CANVAS_HEIGHT*0.4);
-        coverBox.setFillColor(backdropColor);
-        canvas.add(coverBox);
-    }
-    
 
 
 }

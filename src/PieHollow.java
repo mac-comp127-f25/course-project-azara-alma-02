@@ -253,7 +253,6 @@ public class PieHollow {
                         //inventory.clearIngredientText(canvas);
                         inventory.getKitchenText1().setText("Pie made!"); // Want to change this so now the ingredients list just says pie, after intearction with the kitchen.
                         inventory.getKitchenText2().setText("Go to the Bake Sale!"); // Would be cool if these things showed up somewhere, but not quite sure how to do that, might have misinterpreted this methods purpose
-                        inventory.pieMadeBox(canvas, BACKDROP);
                     } else if(pieMade) {
                         inventory.getKitchenText1().setText("You made a pie!");
                         inventory.getKitchenText2().setText("Sell it at the bake sale now!");
