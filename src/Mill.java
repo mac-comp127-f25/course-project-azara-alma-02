@@ -44,7 +44,6 @@ public class Mill implements Stand{
     ingredientsList.add("Flour");
     inventory.getFlourBoxText().setText("X");
 
-
   }
 
   @Override

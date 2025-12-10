@@ -170,11 +170,11 @@ public class PieHollow {
     }
 
     /*
-    * Adds elements to the welcomeScreen GraphicsGroup which give the user instrcutions on how to play the game. Contains a play button which 
+    * Adds elements to the welcomeScreen GraphicsGroup which give the user instructions on how to play the game. Contains a play button which 
     * removes the welcomeScreen from the canvas and calls makeBaker() and keyMoved to set up the window for the user to begin playing PieHollow. 
      */
     private void makeWelcomeScreen(){
-        Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.2);
+        Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.25);
         backdrop.setFillColor(BACKDROP);
         welcomeScreen.add(backdrop);
 
@@ -203,9 +203,12 @@ public class PieHollow {
 
         GraphicsText line6=new GraphicsText("Then, bring your pie to Bobbi's Bakesale!!",CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.55);
         welcomeScreen.add(line6);
+
+        GraphicsText line7=new GraphicsText("Use your arrow keys to move around the map",CANVAS_WIDTH*0.31, CANVAS_HEIGHT*0.58);
+        welcomeScreen.add(line7);
         
         Button playButton= new Button("PLAY!");
-        playButton.setPosition(CANVAS_WIDTH*0.41, CANVAS_HEIGHT*0.56);
+        playButton.setPosition(CANVAS_WIDTH*0.41, CANVAS_HEIGHT*0.60);
         welcomeScreen.add(playButton);
         
         playButton.onClick(() -> {             

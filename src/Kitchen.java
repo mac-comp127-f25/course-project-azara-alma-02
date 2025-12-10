@@ -4,7 +4,6 @@ import java.util.List;
 import edu.macalester.graphics.GraphicsObject;
 import edu.macalester.graphics.GraphicsText;
 import edu.macalester.graphics.Image;
-import edu.macalester.graphics.Rectangle;
 
 /*
 * Authors: Alma and Azara
