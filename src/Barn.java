@@ -71,7 +71,7 @@ public class Barn implements Stand {
   @Override
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up eggs & butter!");
-    inventory.getKitchenText2().setText("Bailey built his new house!");
+    inventory.getKitchenText2().setText("Bailey built his new bungalo!");
   }
   
   @Override

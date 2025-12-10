@@ -307,7 +307,7 @@ public class PieHollow {
         line2.setFillColor(Color.BLACK);
         winScreen.add(line2);
 
-        GraphicsText line3 = new GraphicsText ("You can either play again or exit the game",CANVAS_WIDTH*0.33, CANVAS_HEIGHT*0.49);
+        GraphicsText line3 = new GraphicsText ("You can either play again or exit the game.",CANVAS_WIDTH*0.33, CANVAS_HEIGHT*0.49);
         line2.setFillColor(Color.BLACK);
         winScreen.add(line3);
 
