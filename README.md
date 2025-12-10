@@ -12,7 +12,8 @@ Our project does not lend itself towards negative uses, and does not contain man
 Image links:
 Pie image – 
 https://pngtree.com/freepng/blueberry-pie_16178006.html
-Bobbi image – https://www.freepik.com/premium-ai-image/medieval-girl-peasant-costume-unreal-engine-5-photography_70098975.htm
+Bobbi image – 
+https://www.freepik.com/premium-ai-image/medieval-girl-peasant-costume-unreal-engine-5-photography_70098975.htm 
 Sugar and salt stand image – https://pngtree.com/freepng/medieval-fantasy-tavern-illustration_15802013.html 
 Barn image – 
 https://pngtree.com/freepng/barn-clipart-cartoon-fantasy-vintage-house-illustration-vector_11077933.html 
@@ -22,8 +23,7 @@ Well image –
 https://pngtree.com/freepng/rustic-wooden-wishing-well-illustration_20844359.html 
 Filling stand image – 
 https://pngtree.com/freepng/grocery-clipart-cartoon-illustration-of-fruit-stand-vector_11078634.html 
-Bake sale image – 
-https://www.vecteezy.com/png/27147532-watercolor-bakery-shop-clipart 
+Bake sale image – https://www.vecteezy.com/png/27147532-watercolor-bakery-shop-clipart 
 Kitchen/house image – https://pngtree.com/freepng/imaginary-abodes-cartoon-fantasy-houses_15668267.html 
 Baker/player image – 
 https://adventures-of-nadya.fandom.com/wiki/Megrim_of_Maillard 
