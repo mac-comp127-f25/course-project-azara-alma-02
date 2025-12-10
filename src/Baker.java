@@ -3,10 +3,9 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+*  
 */
 public class Baker {
-    //We might want to move the inventory to the baker class, because then we could use a hash map to keep track, instead of array list. Plus then it like "belongs" to the baker, not the game.
     double MapHeight = PieHollow.getHeight();
     double MapWidth= PieHollow.getWidth();
 
@@ -72,19 +71,17 @@ public class Baker {
         double topBakerBound = this.y;
         double bottomBakerBound = this.y + SIZE;
 
-        double leftStandBound = stand.getX(); //- so it can extend out to the left, same for reaching up with topStandBound.
+        double leftStandBound = stand.getX(); 
         double rightStandBound = stand.getX() + stand.getWidth();
         double topStandBound = stand.getY();
         double bottomStandBound = stand.getY() + stand.getHeight();
         
-        boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound; //Lol thanks conceptual mastery puzzles.
+        boolean xCollision = leftBakerBound < rightStandBound && rightBakerBound > leftStandBound; 
         boolean yCollision = topBakerBound < bottomStandBound && bottomBakerBound > topStandBound;
 
         return xCollision && yCollision;
     }
 
-    //GETTER METHODS
-    
     public GraphicsObject getGraphics(){
         bakerShape = new Image(x, y, "BakerImage.png");
         bakerShape.setMaxWidth(SIZE);
@@ -93,7 +90,7 @@ public class Baker {
         return bakerShape;
     }
 
-      public double getX() {
+    public double getX() {
         return x;
     }
     public double getY() {

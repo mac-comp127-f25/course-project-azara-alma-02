@@ -152,17 +152,10 @@ public class PieHollow {
         }
     }
 
-    //GETTER METHODS 
-    /*
-    * Returns the canvas height.
-     */
     public static double getHeight(){
         return CANVAS_HEIGHT;
     }
 
-    /*
-    * Returns the canvas width. 
-     */
     public static double getWidth(){
         return CANVAS_WIDTH;
     }

@@ -3,7 +3,11 @@ import java.awt.Color;
 import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Image;
 import edu.macalester.graphics.Rectangle;
-
+/*
+* Authors: Alma and Azara 
+* Contains an Image with a string path to PieImage.png that is overlayed onto a rectangle. Has two methods, one adds the screen to the canvas 
+ and the other removes it from the canvas. 
+*/
 public class PieScreen {
     double CANVAS_HEIGHT = PieHollow.getHeight();
     double CANVAS_WIDTH= PieHollow.getWidth();

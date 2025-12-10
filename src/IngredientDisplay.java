@@ -83,51 +83,30 @@ public class IngredientDisplay{
         canvas.add(kitchenText2);
     }
 
-    /* 
-    * Returns waterBoxText
-     */
     public GraphicsText getWaterBoxText(){
         return waterBoxText;
     }
 
-    /*
-    * Returns flourBoxText
-     */
     public GraphicsText getFlourBoxText(){
         return flourBoxText; 
     }
 
-    /*
-    * Returns sugarSaltBoxText
-     */
     public GraphicsText getSugarSaltBoxText(){
         return sugarSaltBoxText;
     }
 
-    /*
-    * Returns eggsButterBoxText
-    */
     public GraphicsText getEggsButterBoxText(){
         return eggsButterBoxText;
     }
 
-    /*
-    * Returns blueberriesBoxTect
-     */
     public GraphicsText getBlueberriesBoxText(){
         return blueberriesBoxText; 
     }
 
-    /*
-    * Returns kitchenText1
-     */
     public GraphicsText getKitchenText1(){
         return kitchenText1;
     }
 
-    /*
-    * Returns kitchenText 2
-     */
     public GraphicsText getKitchenText2(){
         return kitchenText2; 
     }
