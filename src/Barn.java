@@ -8,7 +8,9 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Extends the Stand interface. Creates the barn stand object. Has getter methods for its x and y position, 
+* as well as its width and height. Has methods to change the kitchen text, called on interaction and a method 
+* to add ingredients to ingredients list.
 */
 public class Barn implements Stand {
   String name = "Bailey's Barn";

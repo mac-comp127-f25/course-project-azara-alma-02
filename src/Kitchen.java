@@ -8,10 +8,11 @@ import edu.macalester.graphics.Rectangle;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Extends the Stand interface. Creates the kitchen object. Has getter methods for its x and y position, 
+* as well as its width and height. Does not directly change the kitchen text or alter the ingredients list.
 */
 public class Kitchen implements Stand{ 
-    String name = "Katie's Kitchen";                   //TODO: Make a Pie Image-add pie to ingredients list --have graphics text changed to be a pie
+    String name = "Katie's Kitchen";                 
     
     double MapHeight = PieHollow.getHeight();
     double MapWidth=PieHollow.getWidth();
@@ -56,12 +57,12 @@ public class Kitchen implements Stand{
     }
 
     public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
-        // Does not add ingredients to ingredientList
+        // Not needed for kitchen.
     }
 
     @Override
     public void changeKitchenText(IngredientDisplay inventory) {
-        //Not needed for the kitchen.
+        // Not needed for the kitchen.
     }
 
     @Override

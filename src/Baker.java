@@ -3,7 +3,7 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-*  
+* TODO: add description of class and methods
 */
 public class Baker {
     double MapHeight = PieHollow.getHeight();
@@ -65,6 +65,10 @@ public class Baker {
         updatePosition(x, y);
     }
 
+    /*
+    * Takes in a Stand object. Returns a boolean according to whether the baker object is in the vacinity 
+    * of a stand object.  
+    */
     public boolean reachesStand(Stand stand) {
         double leftBakerBound = this.x;
         double rightBakerBound = this.x + SIZE;

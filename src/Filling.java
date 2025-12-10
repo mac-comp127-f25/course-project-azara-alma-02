@@ -7,7 +7,9 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* Creates the filling stand object
+* Extends the Stand interface. Creates the filling stand object. Has getter methods for its x and y position, 
+* as well as its width and height. Has methods to change the kitchen text, called on interaction and a method 
+* to add ingredients to ingredients list.
 */
 public class Filling implements Stand {
   String name = "Bridget's Blueberries";

@@ -7,7 +7,7 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* 
+* TODO: add description of class and methods
 */
 public class BakeSale implements Stand {
     String name = "Bobbi's Bake Sale"; 
@@ -54,12 +54,12 @@ public class BakeSale implements Stand {
     }
 
     public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
-        // Does not add ingredients
+        // Not needed for bake sale.
     }
 
     @Override
     public void changeKitchenText(IngredientDisplay inventory) {
-        // Not needed for bakeSale.
+        // Not needed for bake sale.
     }
 
     @Override
