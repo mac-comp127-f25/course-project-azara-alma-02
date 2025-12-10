@@ -47,33 +47,51 @@ public class Barn implements Stand {
         }
         return barnShape;
   }
-    
+   
+  /*
+  * Returns the barn's X coordinate
+  */
   @Override
   public double getX() {
     return X;
   }
 
+  /*
+  * Returns the barn's Y coordinate
+  */
   @Override
   public double getY() {
     return Y;
   }
 
+  /*
+  * Returns the barn's width
+  */
   @Override
   public double getWidth() {
     return Width;
   }
 
+  /*
+  * Returns the barn's height
+  */
   @Override
   public double getHeight() {
     return Height;
   }
 
+  /* 
+  * Updates KitchenText 1 & 2: Tells the user what ingredients they've collected and shares a fun fact about the barn's inhabitant
+  */
   @Override
   public void changeKitchenText(IngredientDisplay inventory) {
     inventory.getKitchenText1().setText("You picked up eggs & butter!");
     inventory.getKitchenText2().setText("Bailey built his new house!");
   }
 
+  /*
+  * Creates a graphics text, with the Barn's name positioned underneath the barn. 
+  */
   @Override
   public GraphicsText setLabel() {
     GraphicsText barnLabel=new GraphicsText(name, X+30, Y+Height-7);
