@@ -40,7 +40,7 @@ public class Filling implements Stand {
   }
     
   @Override
-  public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
+  public void addIngredients(List <String> ingredientsList,IngredientDisplay inventory) {
     ingredientsList.add("Blueberries"); 
     inventory.getBlueberriesBoxText().setText("X");
   }

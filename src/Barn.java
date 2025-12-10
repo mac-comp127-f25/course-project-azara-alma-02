@@ -31,7 +31,7 @@ public class Barn implements Stand {
   }
 
   @Override
-  public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
+  public void addIngredients(List <String>ingredientsList,IngredientDisplay inventory) {
     ingredientsList.add("Butter"); 
     ingredientsList.add("Eggs");
     inventory.getEggsButterBoxText().setText("X");
