@@ -9,7 +9,7 @@ import edu.macalester.graphics.GraphicsText;
 * TODO: add description of class and methods
 */
 public interface Stand {                                  
-    void addIngredients(List ingredientsList, IngredientDisplay inventory);   
+    void addIngredients(List <String> ingredientsList, IngredientDisplay inventory);   
     String getName();
     GraphicsObject getGraphics(Color color);
     GraphicsText setLabel();

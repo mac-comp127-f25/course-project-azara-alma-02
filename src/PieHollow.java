@@ -160,7 +160,6 @@ public class PieHollow {
         return CANVAS_WIDTH;
     }
 
-    // GRAPHICAL ELEMENTS THAT APPEAR ON THE GAME WINDOW
     /*
     *Sets the width and height of PieHollow's background map image and adds it to the canvas. 
      */

@@ -29,7 +29,7 @@ public class Sugar_Salt implements Stand {
   }
 
   @Override
-  public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
+  public void addIngredients(List <String> ingredientsList, IngredientDisplay inventory) {
     ingredientsList.add("Sugar");
     ingredientsList.add("Salt");
     inventory.getSugarSaltBoxText().setText("X");

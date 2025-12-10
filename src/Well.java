@@ -25,7 +25,7 @@ public class Well implements Stand {
     private Image wellShape; 
 
     @Override
-    public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
+    public void addIngredients(List <String> ingredientsList,IngredientDisplay inventory) {
         ingredientsList.add("Water");
         inventory.getWaterBoxText().setText("X");
     }

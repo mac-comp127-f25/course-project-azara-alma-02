@@ -56,7 +56,7 @@ public class Kitchen implements Stand{
         return Height;
     }
 
-    public void addIngredients(List ingredientsList, IngredientDisplay inventory) {
+    public void addIngredients(List <String> ingredientsList, IngredientDisplay inventory) {
         // Not needed for kitchen.
     }
 
