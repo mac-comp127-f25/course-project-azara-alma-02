@@ -12,7 +12,8 @@ import edu.macalester.graphics.ui.Button;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Holds most of the game logic. Initializes the canvas and graphics objects. Has methods to move the baker,
+* interact with stands, and the win game logic. Run this class to play the game.
 */
 public class PieHollow {
     CanvasWindow canvas; 
@@ -95,8 +96,13 @@ public class PieHollow {
             checkInteractions();  
         });
     }
-
-        private void checkInteractions() {
+    /*
+    * Handles interactions between the baker and the stands. Iterates through a list of the stands and adds 
+    * ingredients according to what stand is interacted with. Dictates weather interaction with the kitchen 
+    * bake sale is possible according to how many ingredients have been collected. Calls win screen when game
+    * completed. 
+     */
+    private void checkInteractions() {
         for(int i = standList.size() - 1; i >= 0; i--) { 
             Stand stand = standList.get(i);
 
@@ -171,10 +177,9 @@ public class PieHollow {
         canvas.add(PieHollowMapImage);
     }
 
-     /*
+    /*
     * Adds elements to the welcomeScreen GraphicsGroup which give the user instrcutions on how to play the game. Contains a play button which 
-    removes the welcomeScreen from the canvas and calls makeBaker() and keyMoved to set up the window for the user to begin playing PieHollow. 
-
+    * removes the welcomeScreen from the canvas and calls makeBaker() and keyMoved to set up the window for the user to begin playing PieHollow. 
      */
     private void makeWelcomeScreen(){
         Rectangle backdrop=new Rectangle(CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.40,CANVAS_WIDTH*0.3,CANVAS_HEIGHT*0.2);

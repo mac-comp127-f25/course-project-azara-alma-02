@@ -7,7 +7,7 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Creates the filling stand object
 */
 public class Filling implements Stand {
   String name = "Bridget's Blueberries";
@@ -41,8 +41,6 @@ public class Filling implements Stand {
   public void addIngredients(List ingredientsList,IngredientDisplay inventory) {
     ingredientsList.add("Blueberries"); 
     inventory.getBlueberriesBoxText().setText("X");
-
-
   }
 
   @Override
@@ -70,6 +68,7 @@ public class Filling implements Stand {
     inventory.getKitchenText1().setText("You picked up blueberries!");
     inventory.getKitchenText2().setText("Bridget recently had a baby!");
   }
+
   @Override
   public GraphicsText setLabel() {
     GraphicsText fillingLabel=new GraphicsText(name, X+5, Y+Height-7);
