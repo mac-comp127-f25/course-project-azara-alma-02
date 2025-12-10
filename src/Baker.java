@@ -3,7 +3,9 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Creates the GraphicsObject baker, which the user controls with keys to play the game. Contains methods
+* which are called according to which arrow key is pressed by the user. Contains method which determines whether
+* the baker is in the vicinity of a stand in order to interact with it.
 */
 public class Baker {
     double MapHeight = PieHollow.getHeight();

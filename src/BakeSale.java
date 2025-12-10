@@ -7,7 +7,8 @@ import edu.macalester.graphics.Image;
 
 /*
 * Authors: Alma and Azara
-* TODO: add description of class and methods
+* Extends the Stand interface. Creates the bake sale object. Has getter methods for its x and y position,
+* as well as its width and height. Does not directly change the kitchen text or alter the ingredients list.
 */
 public class BakeSale implements Stand {
     String name = "Bobbi's Bake Sale"; 
